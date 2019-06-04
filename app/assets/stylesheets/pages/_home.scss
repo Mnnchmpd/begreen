@@ -1,1 +1,48 @@
-// Specific CSS for your home-page
+.text-center-article {
+
+
+}
+.card-white-top {
+    background-color: white;
+    padding: 10px;
+}
+
+.card-white-img {
+    background-image: url(https://source.unsplash.com/random);
+    background-size: cover;
+    height: 150px;
+    padding-top: 10px;
+}
+
+.li {
+    display: list-item;
+
+}
+
+.fa-eye:before {
+    content: "\f06e";
+}
+
+.list-inline {
+    list-style: none;
+    padding-left: 0px;
+    margin: 0;
+}
+
+.card-white-top .list-inline {
+    padding-top: 10px;
+    color: #B0B0B0;
+    text-align: right;
+}
+
+.list-inline li {
+    display: inline-block;
+}
+
+.page-down-footer {
+  min-height: calc(100vh - 96px);
+}
+
+
+
+
