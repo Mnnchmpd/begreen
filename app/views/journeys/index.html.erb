@@ -1,0 +1,30 @@
+<form class="form-inlin where we go">
+  <input class="form-control mr-sm-2" type="search" placeholder="12 rue de la Verrerie" aria-label="Search">
+  <input class="form-control mr-sm-2" style="margin-bottom: 20px;" type="search" placeholder="29 avenue des Gobelins" aria-label="Search">
+</form>
+
+<div class="way-to-go" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-outline-success">Marche</button>
+  <button type="button" class="btn btn-outline-success">Vélo</button>
+  <button type="button" class="btn btn-outline-success">Métro</button>
+</div>
+
+<div class="way-to-go" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-outline-success">Marche</button>
+  <button type="button" class="btn btn-outline-success">Vélo</button>
+  <button type="button" class="btn btn-outline-success">Métro</button>
+</div>
+
+<ul class="journey-path">
+  <li class="list-group-item">le premier trajet, le plus écolo</li>
+  <li class="list-group-item list-group-item-outline-success">Itinéraire</li>
+  <li class="list-group-item list-group-item-outline-success">Itinéraire</li>
+  <li class="list-group-item list-group-item-outline-success">Itinéraire</li>
+  <li class="list-group-item list-group-item-outline-success">Itinéraire</li>
+  <li class="list-group-item list-group-item-outline-success">Itinéraire</li>
+
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+    <%= link_to "Let's Go", detail_journeys_path, class: "nav-link" %>
+
+</ul>
+
