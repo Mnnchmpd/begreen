@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "home", to: "pages#home"
   get "dashboard", to: "pages#dashboard"
 
+
   resources :journeys, only: [:index, :update, :show, :new, :create] do
     collection do
       get :detail
