@@ -1,4 +1,5 @@
 class JourneysController < ApplicationController
+
   def show
     @journey = Journey.find(params[:id])
 
@@ -36,5 +37,9 @@ class JourneysController < ApplicationController
 
   def journey_params
     params.require(:journey).permit(:starting_point, :ending_point)
+
+
+  def detail
+
   end
 end
