@@ -15,8 +15,10 @@
   <button type="button" class="btn btn-outline-success">Métro</button>
 </div>
 
+
+
 <ul class="journey-path">
-  <li class="list-group-item">le premier trajet, le plus écolo</li>
+  <li class="list-group-item"><%= @results %></li>
   <li class="list-group-item list-group-item-outline-success">Itinéraire</li>
   <li class="list-group-item list-group-item-outline-success">Itinéraire</li>
   <li class="list-group-item list-group-item-outline-success">Itinéraire</li>
@@ -24,7 +26,7 @@
   <li class="list-group-item list-group-item-outline-success">Itinéraire</li>
 
   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-    <%= link_to "Let's Go", detail_journeys_path, class: "nav-link" %>
+    <%= link_to "Let's Go", details_path, class: "nav-link" %>
 
 </ul>
 

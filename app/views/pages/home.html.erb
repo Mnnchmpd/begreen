@@ -1,6 +1,6 @@
 <div>
    <h1>Where are you going ? </h1>
-     <%= simple_form_for @journey do |f| %>
+     <%= simple_form_for @result, url: results_path, method: :get do |f| %>
      <%= f.input :starting_point %>
      <%= f.input :ending_point%>
      <%= f.button :submit, class: 'btn btn-primary' %>
@@ -37,7 +37,7 @@
                   </select>
               </div>
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              <%= link_to "Let's Go", journeys_path, class: "nav-link" %>
+              <%= link_to "Let's Go",results_path, class: "nav-link" %>
               </button>
             </form>
           </nav>
