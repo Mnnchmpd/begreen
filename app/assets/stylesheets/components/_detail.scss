@@ -1,0 +1,28 @@
+.card-recap-journey {
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  margin-right: 20px;
+  margin-bottom : 10px;
+  margin-top : 20px;
+  margin-left: 20px;
+  display: flex;
+  background: white;
+  border-radius: 8px;
+}
+
+.journey-detail-card {
+  margin-top : 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background: white;
+  border-radius: 8px;
+  list-style-type: none;
+  text-align: center
+}
+
+.detail-card {
+  border-bottom: solid;
+  border-bottom-color: #B5DDA4;
+
+}
