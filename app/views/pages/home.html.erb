@@ -1,2 +1,8 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div>
+   <h1>Where are you going ? </h1>
+     <%= simple_form_for @journey do |f| %>
+     <%= f.input :starting_point %>
+     <%= f.input :ending_point%>
+     <%= f.button :submit, class: 'btn btn-primary' %>
+   <% end %>
+ </div>
