@@ -1,17 +1,17 @@
- <form class="form-inlin where we go">
-              <input class="form-control mr-sm-2" type="search" placeholder="D'où tu pars ?" aria-label="Search">
-              <input class="form-control mr-sm-2" type="search" placeholder="Où vas-tu ?" aria-label="Search">
-              <div class="form-group">
-                  <label for="exampleFormControlSelect1">Quand pars-tu ?</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option>Maintenant</option>
-                    <option>Dans 30 minutes</option>
-                    <option>Dans une heure ?</option>
-                    <option>Demain</option>
-                  </select>
-              </div>
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              <%= link_to "Let's Go", journeys_path, class: "nav-link" %>
-              </button>
-            </form>
-          </nav>
+ <form class="form-inline where we go">
+    <input class="form-control mr-sm-2" type="search" placeholder="D'où tu pars ?" aria-label="Search">
+    <input class="form-control mr-sm-2" type="search" placeholder="Où vas-tu ?" aria-label="Search">
+  <div class="form-group">
+  <label for="exampleFormControlSelect1">Quand pars-tu ?</label>
+      <select class="form-control" id="exampleFormControlSelect1">
+          <option>Maintenant</option>
+          <option>Dans 30 minutes</option>
+          <option>Dans une heure ?</option>
+          <option>Demain</option>
+      </select>
+  </div>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        <%= link_to "Let's Go", journeys_path, class: "nav-link" %>
+        </button>
+ </form>
+
