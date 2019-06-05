@@ -1,32 +1,40 @@
 <form class="form-inlin where we go">
   <input class="form-control mr-sm-2" type="search" placeholder="12 rue de la Verrerie" aria-label="Search">
-  <input class="form-control mr-sm-2" style="margin-bottom: 20px;" type="search" placeholder="29 avenue des Gobelins" aria-label="Search">
+  <input class="form-control mr-sm-2" style="margin-bottom: 20px;" type="search" placeholder="starting_point" aria-label="Search">
 </form>
 
-<div class="way-to-go" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-outline-success">Marche</button>
-  <button type="button" class="btn btn-outline-success">Vélo</button>
-  <button type="button" class="btn btn-outline-success">Métro</button>
-</div>
+
+
 
 <div class="way-to-go" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-outline-success">Marche</button>
-  <button type="button" class="btn btn-outline-success">Vélo</button>
-  <button type="button" class="btn btn-outline-success">Métro</button>
+  <ul class="journey-path">
+
+    <% @results.each do |result| %>
+      <li class="list-group-item">
+        <button type="button" class="btn btn-outline-success" >
+          <% if result["travel_mode"] == "driving"  %>
+          <p>
+          <%= link_to "Voiture", details_path(result["travel_mode"]) %> </p>
+
+
+          <% elsif result["travel_mode"] == "walking" %>
+            <p> <%= link_to "Marche", details_path(result["travel_mode"]) %> </p>
+           <% elsif result["travel_mode"] == "bicycling" %>
+            <p> <%= link_to "Vélo", details_path(result["travel_mode"]) %> </p>
+           <% else result["travel_mode"] == "transit" %>
+            <p> <%= link_to "Métro", details_path(result["travel_mode"]) %> </p>
+          <% end %>
+
+
+        </button>
+
+        <%= result["routes"][0]["legs"][0]["distance"]["text"] %>
+        <%= result["routes"][0]["legs"][0]["duration"]["text"] %>
+
+
+      </li>
+    <% end %>
+  </ul>
 </div>
 
-
-
-<ul class="journey-path">
-  <li class="list-group-item"><%= @results %></li>
-  <li class="list-group-item list-group-item-outline-success">Itinéraire</li>
-  <li class="list-group-item list-group-item-outline-success">Itinéraire</li>
-  <li class="list-group-item list-group-item-outline-success">Itinéraire</li>
-  <li class="list-group-item list-group-item-outline-success">Itinéraire</li>
-  <li class="list-group-item list-group-item-outline-success">Itinéraire</li>
-
-  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-    <%= link_to "Let's Go", details_path, class: "nav-link" %>
-
-</ul>
 

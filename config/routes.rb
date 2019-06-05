@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "home", to: "pages#home"
   get "dashboard", to: "pages#dashboard"
   get "/results", to: "journeys#results"
-  get "/details", to: "journeys#details"
+  get "/details/:travel_mode", to: "journeys#details", as: "details"
 
   # resources :journeys, only: [:index, :update, :show, :new, :create] do
   #   collection do
