@@ -4,6 +4,13 @@
     <h2>Duration</h2>
   </div>
 </div>
+<div
+  id="map"
+  style="width: 50%;
+  height: 100px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
 <div class="journey-detail-card" id="accordionExample"><a href="#" class="text-decoration-none">
   <div class="detail-card">
     <li><i class="fas fa-leaf"></i> Start my Green Journey</li>
@@ -62,10 +69,6 @@
     </div>
   </div>
 </div>
-
-
-
-
 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
   <%= link_to "Done", dashboard_path, class: "nav-link" %></button>
 
