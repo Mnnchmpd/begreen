@@ -12,17 +12,15 @@ def results
     result = JSON.parse(result_api)
     result["travel_mode"] = mode
     result
-
   end
-
 end
 
   def details
-    # @steps = params["details"]["travel_mode"]
 
+    @starting_point = params["starting_point"]
+    @ending_point = params["ending_point"]
 
-
-
+    @steps = JSON.parse(params["steps"])
 
   end
 
