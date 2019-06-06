@@ -1,0 +1,58 @@
+<div class="fake-map" style="width: 18rem;">
+  <%= image_tag "mapparis.jpg" %>
+</div>
+<div class="card-recap-journey">
+  <div class="card-recap-journey-infos">
+    <img class="img-RER-D" src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Paris_RER_D_icon.svg">
+    <h2>Duration</h2>
+  </div>
+</div>
+<div class="journey-detail-card" id="accordionExample"><a href="#" class="text-decoration-none">
+  <div class="detail-card">
+    <div class="first-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <li><i class="fas fa-leaf"></i> Start my Green Journey</li>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <h3>Marcher jusqu'à la station <i class="fas fa-arrow-circle-right"></i>Bréguet-Sabin</h3>
+      </div>
+    </div>
+  </div>
+  <div class="detail-card">
+    <div class="first-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <li><i class="fas fa-subway"></i>  20 minutes</li>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <h3>Prendre le métro jusqu'au la Station Les Gobelins</h3>
+      </div>
+    </div>
+  </div>
+  <div class="detail-card">
+    <div class="first-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          <li><i class="fas fa-bicycle"></i> 12 minutes</li>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        <h3>Prendre le Vélib Station Parmention jusqu'à Rue Saint Maur</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+  <%= link_to "Let's Go", dashboard_path, class: "nav-link" %></button>
+
+
