@@ -1,6 +1,7 @@
 <form class="form-inlin where we go">
-  <input class="form-control mr-sm-2" type="search" placeholder="12 rue de la Verrerie" aria-label="Search">
-  <input class="form-control mr-sm-2" style="margin-bottom: 20px;" type="search" placeholder="starting_point" aria-label="Search">
+  <input class="form-control mr-sm-2" type="search" aria-label="Search">
+
+  <input class="form-control mr-sm-2" style="margin-bottom: 20px;" type="search" aria-label="Search">
 </form>
 
 
@@ -14,13 +15,16 @@
 
           <% if result["travel_mode"] == "driving"  %>
             <% button_name = 'Voiture' %>
-
+            <%= (result["routes"][0]["legs"][0]["distance"]["text"]).to_f * 206 %> g CO2 émis
           <% elsif result["travel_mode"] == "walking" %>
-           <% button_name = 'Marche' %>
+            <% button_name = 'Marche' %>
+            0 g CO2 émis
            <% elsif result["travel_mode"] == "bicycling" %>
-           <% button_name = 'Vélo' %>
+            <% button_name = 'Vélo' %>
+            0 g CO2 émis
            <% else result["travel_mode"] == "transit" %>
             <% button_name = 'Métro' %>
+            <%= (result["routes"][0]["legs"][0]["distance"]["text"]).to_f * 3.8 %> g CO2 émis
           <% end %>
 
           <%= form_tag details_path(result["travel_mode"]) do %>
@@ -34,8 +38,10 @@
 
 
         <%= result["routes"][0]["legs"][0]["distance"]["text"] %>
+
         <%= result["routes"][0]["legs"][0]["duration"]["text"] %>
-        <%#= result["routes"][0]["legs"][0]["steps"] %>
+
+
 
 
 
