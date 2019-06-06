@@ -18,12 +18,15 @@ def results
 end
 
   def details
+    @journeys = Journey.where.not(latitude: nil, longitude: nil)
+
+    @markers = @journeys.map do |journey|
+      {
+        lat: journey.latitude,
+        lng: journey.longitude,
+      }
+    end
     # @steps = params["details"]["travel_mode"]
-
-
-
-
-
   end
 
   # def create
