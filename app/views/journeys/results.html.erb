@@ -11,25 +11,32 @@
 
     <% @results.each do |result| %>
       <li class="list-group-item">
-        <button type="button" class="btn btn-outline-success" >
-          <% if result["travel_mode"] == "driving"  %>
-          <p>
-          <%= link_to "Voiture", details_path(result["travel_mode"]) %> </p>
 
+          <% if result["travel_mode"] == "driving"  %>
+            <% button_name = 'Voiture' %>
 
           <% elsif result["travel_mode"] == "walking" %>
-            <p> <%= link_to "Marche", details_path(result["travel_mode"]) %> </p>
+           <% button_name = 'Marche' %>
            <% elsif result["travel_mode"] == "bicycling" %>
-            <p> <%= link_to "Vélo", details_path(result["travel_mode"]) %> </p>
+           <% button_name = 'Vélo' %>
            <% else result["travel_mode"] == "transit" %>
-            <p> <%= link_to "Métro", details_path(result["travel_mode"]) %> </p>
+            <% button_name = 'Métro' %>
+          <% end %>
+
+          <%= form_tag details_path(result["travel_mode"]) do %>
+            <%= hidden_field_tag 'starting_point', params[:journey][:starting_point] %>
+            <%= hidden_field_tag 'ending_point', params[:journey][:ending_point] %>
+            <%= hidden_field_tag 'steps', result["routes"][0]["legs"][0]["steps"].to_json %>
+            <%= button_tag button_name, class: "btn btn-outline-success" %>
           <% end %>
 
 
-        </button>
+
 
         <%= result["routes"][0]["legs"][0]["distance"]["text"] %>
         <%= result["routes"][0]["legs"][0]["duration"]["text"] %>
+        <%#= result["routes"][0]["legs"][0]["steps"] %>
+
 
 
       </li>

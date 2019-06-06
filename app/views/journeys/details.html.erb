@@ -6,19 +6,33 @@
 </div>
 <div class="journey-detail-card" id="accordionExample"><a href="#" class="text-decoration-none">
   <div class="detail-card">
-    <div class="first-header" id="headingOne">
-      <h2 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <li><i class="fas fa-leaf"></i> Start my Green Journey</li>
-        </button>
-      </h2>
-    </div>
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
-        <h3>Marcher jusqu'à la station <i class="fas fa-arrow-circle-right"></i>Bréguet-Sabin</h3>
+    <li><i class="fas fa-leaf"></i> Start my Green Journey</li>
+    <% @steps.each do |step| %>
+      <div class="first-header" id="headingOne">
+        <h2 class="mb-0">
+          <li><i class="fas fa-leaf"></i> <%= step["travel_mode"] %>
+            <%= step["duration"]["text"] %> </li>
+        </h2>
       </div>
-    </div>
   </div>
+  <div class="detail-card">
+        <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <h3>
+              <%= step["html_instructions"].html_safe %>
+              <%= step["distance"]["text"] %>
+            </h3>
+            </div>
+        </div>
+    <% end %>
+  </div>
+
+
+
+
+
+       <!--  <h3>Marcher jusqu'à la station <i class="fas fa-arrow-circle-right"></i>Bréguet-Sabin</h3> -->
+
   <div class="detail-card">
     <div class="first-header" id="headingTwo">
       <h2 class="mb-0">
@@ -48,6 +62,9 @@
     </div>
   </div>
 </div>
+
+
+
 
 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
   <%= link_to "Let's Go", dashboard_path, class: "nav-link" %></button>
