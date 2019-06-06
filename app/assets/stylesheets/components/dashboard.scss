@@ -1,5 +1,5 @@
 .menu-dashboard-catgories-icons {
-  background : #D1EFD0;
+  background : white;
  }
 
 .nav-link {
@@ -10,6 +10,7 @@
 
 .nav-tabs {
   height: 50px;
+  background : white;
 }
 
 i {
@@ -17,6 +18,81 @@ i {
   font-size: 15px;
 }
 
-.nav-item {
+.tab-pane {
+  justify-content: space-around;
+  align-items: center;
+  height: 700px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+  display: flex;
+  background: #E1F4E8;
+  border-radius: 12px;
+}
+
+.first-row-infos-circle {
+  display: flex;
+  justify-content: space-between;
+  margin-top :20px;
+  padding: 22px 49px;
+}
+
+.circle-card-picto {
+  background: white;
+  height : 70px;
+  width: 70px;
+  border-radius: 150px;
+  padding: 16px;
+  justify-content: center;
+    i {
+    font-size: 32px;
+    color: #69B578;
+      }
+}
+
+.first-row-infos-text {
+  display: flex;
+  justify-content: space-between;
+  margin-top :0px;
+  padding: 5px 56px;
+  font-family:tahoma, sans-serif;
+  font-weight: 500px;
+  font-size: 18px;
+  color: #3A7D44;
+ line-height: 12px;
+ text-align: center;
+}
+
+.second-row-infos-text {
+  display: flex;
+  justify-content: space-between;
+  margin-top :0px;
+  padding: 8px 42px;
+  font-family:tahoma, sans-serif;
+  font-weight: 500px;
+  font-size: 10px;
+  color: #31493C;
+ line-height: 12px;
+ text-align: center;
+}
+
+.container-historical-journey {
+  border-radius: 35px;
+}
+.button-link-journey:hover {
+  text-decoration: none !important;
+  color: #69B578;
+}
+
+.card-body {
+  i {
+    color:#69B578;
+    padding: 8px;
+  }
+
+
+
+
 
 }
+

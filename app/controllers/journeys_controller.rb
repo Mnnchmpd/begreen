@@ -12,12 +12,11 @@ def results
     result = JSON.parse(result_api)
     result["travel_mode"] = mode
     result
-
   end
-
 end
 
   def details
+
     @journeys = Journey.where.not(latitude: nil, longitude: nil)
 
     @markers = @journeys.map do |journey|
@@ -27,6 +26,12 @@ end
       }
     end
     # @steps = params["details"]["travel_mode"]
+
+
+    @starting_point = params["starting_point"]
+    @ending_point = params["ending_point"]
+
+    @steps = JSON.parse(params["steps"])
   end
 
   # def create
