@@ -1,53 +1,56 @@
-<form class="form-inlin where we go">
-  <input class="form-control mr-sm-2" type="search" aria-label="Search">
+<div class="all-propositions">
+  <div class="way-to-go" role="group" aria-label="Basic example">
+    <ul class="journey-path">
+      <% @results.each do |result| %>
+        <div class="d-flex">
+          <li class="list-group-item">
+            <p><%= result["routes"][0]["legs"][0]["distance"]["text"] %>
+              <%= image_tag "3.jpg", class: "avatar-two" %></p>
 
-  <input class="form-control mr-sm-2" style="margin-bottom: 20px;" type="search" aria-label="Search">
-</form>
+            <p><%= result["routes"][0]["legs"][0]["duration"]["text"] %>
+            <%= image_tag "2.jpg", class: "avatar-two" %></p>
+          </li>
 
+          <li class="list-group-item">
+            <p>
+              <% if result["travel_mode"] == "driving" %>
+                <% button_name = 'Voiture' %>
 
+                <%= (result["routes"][0]["legs"][0]["distance"]["text"]).to_f * 206 %> g
+                <%= image_tag "1BCjpg.jpg", class: "avatar-two" %>
+              <% elsif result["travel_mode"] == "walking" %>
+                <% button_name = 'Marche' %>
+                0 g CO2 émis <%= image_tag "1BCjpg.jpg", class: "avatar-two" %>
+              <% elsif result["travel_mode"] == "bicycling" %>
+                <% button_name = 'Vélo' %>
+                0 g CO2 émis <%= image_tag "1BCjpg.jpg", class: "avatar-two" %>
+              <% else result["travel_mode"] == "transit" %>
+                <% button_name = 'Métro' %>
+                <%= (result["routes"][0]["legs"][0]["distance"]["text"]).to_f * 3.8 %> g CO2 émis
+                <%= image_tag "1BCjpg.jpg", class: "avatar-two" %>
+              <% end %>
 
-
-<div class="way-to-go" role="group" aria-label="Basic example">
-  <ul class="journey-path">
-
-    <% @results.each do |result| %>
-      <li class="list-group-item">
-
-          <% if result["travel_mode"] == "driving"  %>
-            <% button_name = 'Voiture' %>
-            <%= (result["routes"][0]["legs"][0]["distance"]["text"]).to_f * 206 %> g CO2 émis
-          <% elsif result["travel_mode"] == "walking" %>
-            <% button_name = 'Marche' %>
-            0 g CO2 émis
-           <% elsif result["travel_mode"] == "bicycling" %>
-            <% button_name = 'Vélo' %>
-            0 g CO2 émis
-           <% else result["travel_mode"] == "transit" %>
-            <% button_name = 'Métro' %>
-            <%= (result["routes"][0]["legs"][0]["distance"]["text"]).to_f * 3.8 %> g CO2 émis
-          <% end %>
-
-          <%= form_tag details_path(result["travel_mode"]) do %>
-            <%= hidden_field_tag 'starting_point', params[:journey][:starting_point] %>
-            <%= hidden_field_tag 'ending_point', params[:journey][:ending_point] %>
-            <%= hidden_field_tag 'steps', result["routes"][0]["legs"][0]["steps"].to_json %>
-            <%= button_tag button_name, class: "btn btn-outline-success" %>
-          <% end %>
-
-
-
-
-        <%= result["routes"][0]["legs"][0]["distance"]["text"] %>
-
-        <%= result["routes"][0]["legs"][0]["duration"]["text"] %>
-
-
-
-
-
-      </li>
-    <% end %>
-  </ul>
+              <%= form_tag details_path(result["travel_mode"]) do %>
+                <%= hidden_field_tag 'starting_point', params[:journey][:starting_point] %>
+                <%= hidden_field_tag 'ending_point', params[:journey][:ending_point] %>
+                <%= hidden_field_tag 'steps', result["routes"][0]["legs"][0]["steps"].to_json %>
+                <%= button_tag button_name, class: "btn btn-outline-success" %>
+              <% end %>
+            </p>
+          </li>
+        </div>
+      <% end %>
+    </ul>
+  </div>
 </div>
+
+<div class="form-control mr-sm-2" >
+  <%= @starting_point  %>
+</div>
+
+<div class="form-control mr-sm-2" style="margin-bottom: 20px">
+  <%= @ending_point  %>
+</div>
+<%= link_to "Back to my search", root_path, class: "btn btn-outline-success-two" %>
 
 
