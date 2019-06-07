@@ -1,3 +1,4 @@
+<!-- ICI La Navbar du Dashboard, catégories -->
 <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fas fa-info"></i>  Infos</a>
@@ -6,193 +7,178 @@
     <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="fas fa-user-friends"></i>  Community</a>
   </div>
 </nav>
+<!-- Ici tous les pictos de la vue infos du dashboard -->
 <div class="tab-content" id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
     <div class="first-row-infos-circle">
-        <div class="circle-card-picto"><i class="fas fa-road"></i></div>
-        <div class="circle-card-picto"><i class="fas fa-crown"></i></div>
+      <div class="circle-card-picto">
+        <i class="fas fa-road"></i>
+      </div>
+      <div class="circle-card-picto">
+        <i class="fas fa-crown"></i>
+      </div>
     </div>
     <div class="first-row-infos-text">
-        <div class="text-card"> 60kms</div>
-        <div class="text-card"> Bgreen</div>
-    </div>
-     <div class="second-row-infos-text">
-        <div class="text-card">Parcourus</div>
-        <div class="text-card">Vous êtes ambassadeur</div>
-    </div>
-    <div class="first-row-infos-circle">
-        <div class="circle-card-picto"><i class="fas fa-leaf"></i></div>
-        <div class="circle-card-picto"><i class="fas fa-print"></i></div>
-    </div>
-    <div class="first-row-infos-text">
-        <div class="text-card">1Kg</div>
-        <div class="text-card"> 158 </div>
+      <div class="text-card"> 60kms</div>
+      <div class="text-card"> Bgreen</div>
     </div>
     <div class="second-row-infos-text">
-        <div class="text-card">de CO2 économisé</div>
-        <div class="text-card">trajets à votre actif</div>
+      <div class="text-card">Parcourus</div>
+      <div class="text-card">Vous êtes ambassadeur</div>
     </div>
-
-
     <div class="first-row-infos-circle">
-        <div class="circle-card-picto"><i class="fas fa-walking"></i></div>
-        <div class="circle-card-picto"><i class="fas fa-trophy"></i></div>
+      <div class="circle-card-picto"><i class="fas fa-leaf"></i></div>
+      <div class="circle-card-picto"><i class="fas fa-print"></i></div>
     </div>
     <div class="first-row-infos-text">
-        <div class="text-card"> 20 kms </div>
-        <div class="text-card"> 355 </div>
+      <div class="text-card">1Kg</div>
+      <div class="text-card"> 158 </div>
     </div>
     <div class="second-row-infos-text">
-        <div class="text-card">avant de gagner le challenge</div>
-        <div class="text-card">ème place Bgreenor</div>
+      <div class="text-card">de CO2 économisé</div>
+      <div class="text-card">trajets à votre actif</div>
+    </div>
+    <div class="first-row-infos-circle">
+      <div class="circle-card-picto"><i class="fas fa-walking"></i></div>
+      <div class="circle-card-picto"><i class="fas fa-trophy"></i></div>
+    </div>
+    <div class="first-row-infos-text">
+      <div class="text-card"> 20 kms </div>
+      <div class="text-card"> 355 </div>
+    </div>
+    <div class="second-row-infos-text">
+      <div class="text-card">avant de gagner le challenge</div>
+      <div class="text-card">ème place Bgreenor</div>
     </div>
   </div>
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-    <div class="accordion" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h2 class="mb-0">
-        <button class="btn btn-link button-link-journey" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <i class="fab fa-pagelines"></i>   Journey from 1er October 2019
-        </button>
-      </h2>
-    </div>
-    <div class= container-historical-journey>
-      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+  <!-- Ici la vue de l'historique des trajets  -->
+   <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <% @user.journeys.each do |journey| %>
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link button-link-journey" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <i class="fab fa-pagelines"></i>   Journey from 4 of October 2019
+            </button>
+          </h2>
+        </div>
         <div class="card-body">
-            <i class="fas fa-circle starting-point"></i> 29 avenue des Gobelins
-            <i class="fas fa-ellipsis-v way"></i>
-            <i class="fas fa-circle ending-point"></i> 14 rue Crepin du Gast
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingTwo">
-        <h2 class="mb-0">
-          <button class="btn btn-link collapsed button-link-journey" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-           <i class="fab fa-pagelines"></i>   Journey from 4 march 2019
-          </button>
-        </h2>
-      </div>
-      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-        <div class="card-body">
-            <i class="fas fa-circle starting-point"></i> 29 avenue des Gobelins
-            <i class="fas fa-ellipsis-v way"></i>
-            <i class="fas fa-circle ending-point"></i> 14 rue Crepin du Gast
+          <!--  Ici les le dropdow -> historique des trajets avec point de départ et arrivé-->
+          <div class= "starting-point-journey-historical">
+            <i class="fas fa-circle starting-point"></i>
+            <div class= "starting-point"> <%= journey.starting_point %></div>
+             </div>
+            <i class="fas fa-ellipsis-v way way"></i>
+          <div class= "ending-point-journey-historical">
+            <i class="fas fa-circle ending-point"></i>
+            <div class= "ending-point"><%= journey.ending_point %></div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingThree">
-        <h2 class="mb-0">
-          <button class="btn btn-link collapsed button-link-journey" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <i class="fab fa-pagelines"></i>   Journey from 18 of April 2019
-          </button>
-        </h2>
-      </div>
-      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-        <div class="card-body">
-            <i class="fas fa-circle"></i> 29 avenue des Gobelins
-            <i class="fas fa-ellipsis-v"></i>
-            <i class="fas fa-circle"></i> 14 rue Crepin du Gast
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingThree">
-        <h2 class="mb-0">
-          <button class="btn btn-link collapsed button-link-journey" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            <i class="fab fa-pagelines"></i>  Journey from 6 of December 2019
-          </button>
-        </h2>
-      </div>
-      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-        <div class="card-body">
-            <i class="fas fa-circle"></i> 29 avenue des Gobelins
-
-            <i class= "fas fa-ellipsis-v"></i>
-          <div class= "Ending-point">
-            <i class="fas fa-circle"></i> 14 rue Crepin du Gast
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingFive">
-        <h2 class="mb-0">
-          <div class= button-link-jouney>
-          <button class="btn btn-link collapsed button-link-journey" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-            <i class="fab fa-pagelines"></i>  Journey from 24 of march 2019
-          </button>
-        </div>
-        </h2>
-      </div>
-      <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-        <div class="card-body">
-          <div class= "starting-point">
-            <i class="fas fa-circle"></i> 29 avenue des Gobelins
-          </div>
-          <div class= "way">
-            <i class="fas fa-ellipsis-v"></i>
-          <div class= "Ending-point">
-            <i class="fas fa-circle"></i> 14 rue Crepin du Gast
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingSix">
-        <h2 class="mb-0">
-          <button class="btn btn-link collapsed button-link-journey" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-            <i class="fab fa-pagelines"></i>   Journey from 24 of January 2019
-          </button>
-        </h2>
-      </div>
-      <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-        <div class="card-body">
-          <div class= "starting-point">
-            <i class="fas fa-circle"></i> 29 avenue des Gobelins
-          </div>
-          <div class= "way">
-            <i class="fas fa-ellipsis-v"></i>
-          <div class= "Ending-point">
-            <i class="fas fa-circle"></i> 14 rue Crepin du Gast
-          </div>
-        </div>
-      </div>
-     </div>
-   </div>
-</div>
-
-
-
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <% end %>
   </div>
+
+
+<!-- comment utiliser une partialle pour toutes les cards -->
+
+
+    <!-- </div> -->
+      <!-- <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed button-link-journey" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+             <i class="fab fa-pagelines"></i>   Journey from 4 march 2019
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+             <div class= "starting-point-journey-historical">
+              <i class="fas fa-circle starting-point"></i>
+              <div class= "starting-point">29 avenue des Gobelins</div>
+            </div>
+              <i class="fas fa-ellipsis-v way way"></i>
+            <div class= "ending-point-journey-historical">
+              <i class="fas fa-circle ending-point"></i>
+              <div class= "ending-point">29 avenue des Gobelins</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed button-link-journey" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <i class="fab fa-pagelines"></i>   Journey from 18 of April 2019
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body">
+            <div class= "starting-point-journey-historical">
+              <i class="fas fa-circle starting-point"></i>
+              <div class= "starting-point">29 avenue des Gobelins</div>
+            </div>
+              <i class="fas fa-ellipsis-v way way"></i>
+            <div class= "ending-point-journey-historical">
+              <i class="fas fa-circle ending-point"></i>
+              <div class= "ending-point">29 avenue des Gobelins</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed button-link-journey" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <i class="fab fa-pagelines"></i>  Journey from 6 of December 2019
+            </button>
+          </h2>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+          <div class="card-body">
+            <div class= "starting-point-journey-historical">
+              <i class="fas fa-circle starting-point"></i>
+              <div class= "starting-point">29 avenue des Gobelins</div>
+            </div>
+            <i class="fas fa-ellipsis-v way way"></i>
+            <div class= "ending-point-journey-historical">
+              <i class="fas fa-circle ending-point"></i>
+              <div class= "ending-point">29 avenue des Gobelins</div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">lala</div>
+  <!-- </div> -->
 </div>
 
 
 
+<!-- comment utiliser une partialle pour toutes les cards -->
+      <%# @user.journeys.each do |journey| %>
+        <%#= render 'shared/card', journey: journey %>
+      <%# end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- </div> -->

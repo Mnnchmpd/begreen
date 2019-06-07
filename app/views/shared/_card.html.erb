@@ -1,0 +1,29 @@
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+  <div class="accordion" id="accordionExample">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link button-link-journey" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <i class="fab fa-pagelines"></i>   Journey from <%= journey.date %>
+          </button>
+        </h2>
+      </div>
+  <!-- Ici la div avec les éléméents de l'historique, ne pas changer les noms des classes car il y a du JavaScript -->
+  <!-- <div class= container-historical-journey> -->
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <!--  Ici les le dropdow -> historique des trajets avec point de départ et arrivé-->
+          <div class= "starting-point-journey-historical">
+            <i class="fas fa-circle starting-point"></i>
+            <div class= "starting-point"> <%= journey.starting_point %></div>
+            <!-- <i class="fas fa-ellipsis-v way way"></i> -->
+          </div>
+          <div class= "ending-point-journey-historical">
+            <i class="fas fa-circle ending-point"></i>
+            <div class= "ending-point"><%= journey.starting_point %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
