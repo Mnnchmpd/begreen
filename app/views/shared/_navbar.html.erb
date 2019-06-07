@@ -1,11 +1,16 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Boogaloo|Caveat+Brush|Covered+By+Your+Grace|Gloria+Hallelujah|Indie+Flower|Merienda+One|Patrick+Hand|Schoolbell&display=swap" rel="stylesheet">
+</head>
+
 <div class="navbar navbar-expand-sm navbar-light navbar-begreen">
-  <%= link_to "#", class: "navbar-logo" do %>
-    <%= image_tag "begreenlogo.png" %>
+  <%= link_to "home", class: "navbar-logo" do %>
+    <%= image_tag "begreenlogo3.png" %>
   <% end %>
 
   <div class="navbar-right-side">
-    <p>Home</p>
+      <%= link_to "dashboard", class: "avatar" do %>
     <%= image_tag "https://kitt.lewagon.com/placeholder/users/estellescavennec", class: "avatar" %>
+      <% end %>
   </div>
 </div>
 
