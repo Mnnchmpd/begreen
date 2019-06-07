@@ -1,0 +1,44 @@
+.d-flex {
+  display: flex;
+  border-bottom: 15px;
+  padding: 15px;
+  text-align: center;
+  width: fit-content;
+}
+
+.all-propositions p {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align-last: auto;
+  size: 30px;
+  color: forestgreen;
+  margin: 0;
+  line-height:35px;
+
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  width: 200px;
+  border-color: yellowgreen;
+
+}
+
+.btn-outline-success {
+  color: forestgreen;
+  border-color: yellowgreen;
+  margin-top: 9px;
+
+}
+
+.btn-outline-success-two {
+  color: forestgreen;
+  border-color: yellowgreen;
+}
+

@@ -31,7 +31,7 @@ end
     @markers = @journeys.map do |journey|
       {
         lat: journey.latitude,
-        lng: journey.longitude,
+        lng: journey.longitude
       }
     end
     # @steps = params["details"]["travel_mode"]
