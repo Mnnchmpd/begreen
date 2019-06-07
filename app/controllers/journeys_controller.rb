@@ -1,45 +1,28 @@
 class JourneysController < ApplicationController
 
-def results
-  @starting_point = params["journey"]["starting_point"]
-  @ending_point = params["journey"]["ending_point"]
-  travel_mode = ["driving", "walking", "bicycling", "transit"]
+  def results
+    @starting_point = params["journey"]["starting_point"]
+    @ending_point = params["journey"]["ending_point"]
+    travel_mode = ["driving", "walking", "bicycling", "transit"]
 
-  @results = travel_mode.map do |mode|
-    result_api = RestClient.get("https://maps.googleapis.com/maps/api/directions/json?
-&mode=#{mode}&origin=#{@starting_point}&destination=#{@ending_point}&key=#{ENV['GOOGLE_API_SERVER_KEY']}")
+    @results = travel_mode.map do |mode|
+      result_api = RestClient.get("https://maps.googleapis.com/maps/api/directions/json?
+  &mode=#{mode}&origin=#{@starting_point}&destination=#{@ending_point}&key=#{ENV['GOOGLE_API_SERVER_KEY']}")
 
-    result = JSON.parse(result_api)
-    result["travel_mode"] = mode
-    result
-  end
-
-  # @result = Journey.new(journey_params)
-  # @result.user = current_user
-  # if @result.save
-  #   redirect_to root_path
-  # else
-  #   render :home
-  # end
-end
-
-
-  def details
-
-    @journeys = Journey.where.not(latitude: nil, longitude: nil)
-
-    @markers = @journeys.map do |journey|
-      {
-        lat: journey.latitude,
-        lng: journey.longitude
-      }
+      result = JSON.parse(result_api)
+      result["travel_mode"] = mode
+      result
     end
-    # @steps = params["details"]["travel_mode"]
-
+  end
+  
+  def details
     @starting_point = params["starting_point"]
     @ending_point = params["ending_point"]
-
     @steps = JSON.parse(params["steps"])
+    @markers = [
+      @steps.first["start_location"],
+      @steps.last["end_location"]
+    ]
   end
 
   # def create
@@ -55,6 +38,4 @@ end
   # def journey_params
   #   params.require(:journey).permit(:starting_point, :ending_point)
   # end
-
-
 end
