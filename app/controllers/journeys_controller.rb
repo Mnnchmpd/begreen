@@ -14,7 +14,7 @@ class JourneysController < ApplicationController
       result
     end
   end
-
+  
   def details
     @starting_point = params["starting_point"]
     @ending_point = params["ending_point"]
@@ -29,7 +29,7 @@ class JourneysController < ApplicationController
   #   @journey = Journey.new(journey_params)
   #   @journey.user = current_user
   #   if @journey.save
-  #     redirect_to journeys_path
+  #     redirect_to results_path
   #   else
   #     render :home
   #   end
@@ -38,6 +38,4 @@ class JourneysController < ApplicationController
   # def journey_params
   #   params.require(:journey).permit(:starting_point, :ending_point)
   # end
-
-
 end
