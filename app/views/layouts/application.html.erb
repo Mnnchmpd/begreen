@@ -10,7 +10,10 @@
     <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <%= render 'shared/navbar' %>
+    <div class="box-shadow">
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/dashboard_nav_tabs' if params[:action] == "dashboard" %>
+    </div>
     <%= render 'shared/flashes' %>
     <div class='page-down-footer'>
       <%= yield %>
