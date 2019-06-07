@@ -58,9 +58,9 @@ i {
   font-family:tahoma, sans-serif;
   font-weight: 500px;
   font-size: 18px;
-  color: #3A7D44;
  line-height: 12px;
  text-align: center;
+ color: #6B6770;
 }
 
 .second-row-infos-text {
@@ -71,9 +71,9 @@ i {
   font-family:tahoma, sans-serif;
   font-weight: 500px;
   font-size: 10px;
-  color: #31493C;
- line-height: 12px;
- text-align: center;
+  line-height: 12px;
+  text-align: center;
+  color: #6B6770;
 }
 
 .container-historical-journey {
@@ -87,12 +87,44 @@ i {
 .card-body {
   i {
     color:#69B578;
-    padding: 8px;
+    margin-bottom: 10px;
   }
+}
 
+.way {
+  padding: 12px;
+  margin-left: 63px;
+}
 
+.starting-point-journey-historical {
+  display: flex;
+  justify-content: space-between;
+  padding: 38px 71px;
+  line-height: 13px;
+  text-align: center;
+  margin-top: -57px;
+  margin-bottom: -38px;
+  color: #6B6770;
+}
 
+.starting-point {
+      margin-top: 10px;
+      font-size: 15px;
+    }
+.ending-point {
+      margin-top: 10px;
+      font-size: 15px;
+      padding: -4px;
+    }
 
-
+.ending-point-journey-historical {
+    display: flex;
+    justify-content: space-between;
+    padding: 31px 71px;
+    line-height: 12px;
+    text-align: center;
+    margin-bottom: -46px;
+    margin-top: -45px;
+    color: #6B6770;
 }
 

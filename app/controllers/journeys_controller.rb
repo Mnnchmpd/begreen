@@ -13,7 +13,16 @@ def results
     result["travel_mode"] = mode
     result
   end
+
+  # @result = Journey.new(journey_params)
+  # @result.user = current_user
+  # if @result.save
+  #   redirect_to root_path
+  # else
+  #   render :home
+  # end
 end
+
 
   def details
 
@@ -27,7 +36,6 @@ end
     end
     # @steps = params["details"]["travel_mode"]
 
-
     @starting_point = params["starting_point"]
     @ending_point = params["ending_point"]
 
@@ -38,7 +46,7 @@ end
   #   @journey = Journey.new(journey_params)
   #   @journey.user = current_user
   #   if @journey.save
-  #     redirect_to journeys_path
+  #     redirect_to results_path
   #   else
   #     render :home
   #   end

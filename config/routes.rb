@@ -3,9 +3,12 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get "home", to: "pages#home"
   get "dashboard", to: "pages#dashboard"
-  get "/results", to: "journeys#results"
-  post "/details/:travel_mode", to: "journeys#details", as: "details"
 
+  get "/results", to: "journeys#results"
+  # post "/results", to: "journeys#results"
+
+  post "/details/:travel_mode", to: "journeys#details", as: "details"
+  # resources :journeys, only: [:create]
   # resources :journeys, only: [:index, :update, :show, :new, :create] do
   #   collection do
   #     get :detail
