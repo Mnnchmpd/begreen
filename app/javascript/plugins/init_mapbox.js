@@ -36,7 +36,10 @@ const initMapbox = () => {
 const itineraire = (map, steps) => {
  // check if the route is already loaded
 //  const currentLocationControl = document.querySelector('.mapboxgl-ctrl-geolocate');
+
 // console.log(currentLocationControl).
+// console.log(currentLocationControl);
+  console.log(map.getSource('route'));
   // const allSteps = steps.routes[0].geometry.coordinates;
   if (map.getSource('route')) {
     map.removeLayer('route')

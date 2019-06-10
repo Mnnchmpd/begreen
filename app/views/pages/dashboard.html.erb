@@ -11,39 +11,40 @@
       </div>
     </div>
     <div class="first-row-infos-text">
-      <div class="text-card"> 60kms</div>
-      <div class="text-card"> Bgreen</div>
+      <div class="text-card-1"> 60kms</div>
+      <div class="text-card-2"> Bgreen</div>
     </div>
     <div class="second-row-infos-text">
-      <div class="text-card">Parcourus</div>
-      <div class="text-card">Vous êtes ambassadeur</div>
+      <div class="text-card"> Traveled</div>
+      <div class="text-card">Status</div>
     </div>
     <div class="first-row-infos-circle">
       <div class="circle-card-picto"><i class="fas fa-leaf"></i></div>
       <div class="circle-card-picto"><i class="fas fa-print"></i></div>
     </div>
     <div class="first-row-infos-text">
-      <div class="text-card">1Kg</div>
-      <div class="text-card"> 158 </div>
+      <div class="text-card-1">1Kg</div>
+      <div class="text-card-2"> 158 </div>
     </div>
     <div class="second-row-infos-text">
-      <div class="text-card">de CO2 économisé</div>
-      <div class="text-card">trajets à votre actif</div>
+      <div class="text-card"> CO2 saved</div>
+      <div class="text-card">Journeys</div>
     </div>
     <div class="first-row-infos-circle">
       <div class="circle-card-picto"><i class="fas fa-walking"></i></div>
       <div class="circle-card-picto"><i class="fas fa-trophy"></i></div>
     </div>
     <div class="first-row-infos-text">
-      <div class="text-card"> 20 kms </div>
-      <div class="text-card"> 355 </div>
+      <div class="text-card-1"> 20kms </div>
+      <div class="text-card-2"> 355 </div>
     </div>
     <div class="second-row-infos-text">
-      <div class="text-card">avant de gagner le challenge</div>
-      <div class="text-card">ème place Bgreenor</div>
+      <div class="text-card">challenge</div>
+      <div class="text-card">Bgreenor</div>
     </div>
   </div>
   <!-- Ici la vue de l'historique des trajets  -->
+
    <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
     <% @current_user.journeys.each do |journey| %>
       <div class="card">
@@ -68,94 +69,21 @@
         </div>
       </div>
     <% end %>
-  </div>
 
-
-<!-- comment utiliser une partialle pour toutes les cards -->
-
-
-    <!-- </div> -->
-      <!-- <div class="card">
-        <div class="card-header" id="headingTwo">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed button-link-journey" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-             <i class="fab fa-pagelines"></i>   Journey from 4 march 2019
-            </button>
-          </h2>
-        </div>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-          <div class="card-body">
-             <div class= "starting-point-journey-historical">
-              <i class="fas fa-circle starting-point"></i>
-              <div class= "starting-point">29 avenue des Gobelins</div>
-            </div>
-              <i class="fas fa-ellipsis-v way way"></i>
-            <div class= "ending-point-journey-historical">
-              <i class="fas fa-circle ending-point"></i>
-              <div class= "ending-point">29 avenue des Gobelins</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header" id="headingThree">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed button-link-journey" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              <i class="fab fa-pagelines"></i>   Journey from 18 of April 2019
-            </button>
-          </h2>
-        </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-          <div class="card-body">
-            <div class= "starting-point-journey-historical">
-              <i class="fas fa-circle starting-point"></i>
-              <div class= "starting-point">29 avenue des Gobelins</div>
-            </div>
-              <i class="fas fa-ellipsis-v way way"></i>
-            <div class= "ending-point-journey-historical">
-              <i class="fas fa-circle ending-point"></i>
-              <div class= "ending-point">29 avenue des Gobelins</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header" id="headingThree">
-          <h2 class="mb-0">
-            <button class="btn btn-link collapsed button-link-journey" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              <i class="fab fa-pagelines"></i>  Journey from 6 of December 2019
-            </button>
-          </h2>
-        </div>
-        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-          <div class="card-body">
-            <div class= "starting-point-journey-historical">
-              <i class="fas fa-circle starting-point"></i>
-              <div class= "starting-point">29 avenue des Gobelins</div>
-            </div>
-            <i class="fas fa-ellipsis-v way way"></i>
-            <div class= "ending-point-journey-historical">
-              <i class="fas fa-circle ending-point"></i>
-              <div class= "ending-point">29 avenue des Gobelins</div>
-            </div>
-          </div>
-        </div> -->
-      </div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <div class="accordion" id="accordionJourney">
+      <% @user.journeys.each do |journey| %>
+        <%= render "shared/card", journey: journey %>
+      <% end %>
     </div>
   </div>
 
-  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">lala</div>
-  <!-- </div> -->
+
+
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+    <canvas id="lineChart" width="200" height="250"></canvas>
+  </div>
 </div>
-
-
-
-<!-- comment utiliser une partialle pour toutes les cards -->
-      <%# @user.journeys.each do |journey| %>
-        <%#= render 'shared/card', journey: journey %>
-      <%# end %>
 
 
 

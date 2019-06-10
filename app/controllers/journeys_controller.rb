@@ -36,6 +36,7 @@ class JourneysController < ApplicationController
     else
       render :details
     end
+
   end
 
   def journey_params
