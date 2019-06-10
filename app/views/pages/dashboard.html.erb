@@ -45,12 +45,12 @@
   </div>
   <!-- Ici la vue de l'historique des trajets  -->
    <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-    <% @user.journeys.each do |journey| %>
+    <% @current_user.journeys.each do |journey| %>
       <div class="card">
         <div class="card-header" id="headingOne">
           <h2 class="mb-0">
             <button class="btn btn-link button-link-journey" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              <i class="fab fa-pagelines"></i>   Journey from 4 of October 2019
+              <i class="fab fa-pagelines"></i>  <%= journey.created_at %>
             </button>
           </h2>
         </div>

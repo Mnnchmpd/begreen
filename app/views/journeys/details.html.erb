@@ -3,6 +3,7 @@
   style="width: 100%;
   height: 600px;"
   data-markers="<%= @markers.to_json %>"
+  data-steps="<%= @map_steps.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
 <div class="journey-detail-card" id="accordionExample"><a href="#" class="text-decoration-none">
@@ -27,39 +28,12 @@
         </div>
     <% end %>
   </div>
-
-       <!--  <h3>Marcher jusqu'à la station <i class="fas fa-arrow-circle-right"></i>Bréguet-Sabin</h3> -->
-
-  <div class="detail-card">
-    <div class="first-header" id="headingTwo">
-      <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <li><i class="fas fa-subway"></i>  20 minutes</li>
-        </button>
-      </h2>
-    </div>
-    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body">
-        <h3>Prendre le métro jusqu'au la Station Les Gobelins</h3>
-      </div>
-    </div>
-  </div>
-  <div class="detail-card">
-    <div class="first-header" id="headingThree">
-      <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-          <li><i class="fas fa-bicycle"></i> 12 minutes</li>
-        </button>
-      </h2>
-    </div>
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div class="card-body">
-        <h3>Prendre le Vélib Station Parmention jusqu'à Rue Saint Maur</h3>
-      </div>
-    </div>
-  </div>
 </div>
-<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-  <%= link_to "Done", dashboard_path, class: "nav-link" %></button>
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+    <%= link_to "Done", dashboard_path, class: "nav-link" %></button>
 
-
+  <%= simple_form_for @journey do |f| %>
+    <%= f.input :starting_point, input_html: { value: @starting_point }, as: :hidden %>
+    <%= f.input :ending_point, input_html: { value: @ending_point }, as: :hidden  %>
+  <%= f.submit %>
+  <% end %>

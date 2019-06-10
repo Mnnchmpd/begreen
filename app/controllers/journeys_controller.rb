@@ -1,5 +1,4 @@
 class JourneysController < ApplicationController
-
   def results
     @starting_point = params["journey"]["starting_point"]
     @ending_point = params["journey"]["ending_point"]
@@ -14,8 +13,9 @@ class JourneysController < ApplicationController
       result
     end
   end
-  
+
   def details
+    @journey = Journey.new
     @starting_point = params["starting_point"]
     @ending_point = params["ending_point"]
     @steps = JSON.parse(params["steps"])
@@ -23,19 +23,23 @@ class JourneysController < ApplicationController
       @steps.first["start_location"],
       @steps.last["end_location"]
     ]
+    @map_steps = @steps.map do |s|
+      [s["start_location"].values.reverse, s["end_location"].values.reverse]
+    end.flatten(1)
   end
 
-  # def create
-  #   @journey = Journey.new(journey_params)
-  #   @journey.user = current_user
-  #   if @journey.save
-  #     redirect_to results_path
-  #   else
-  #     render :home
-  #   end
-  # end
+  def create
+    @journey = Journey.new(journey_params)
+    @journey.user = current_user
+    if @journey.save
+      redirect_to dashboard_path
+    else
+      render :details
+    end
+  end
 
-  # def journey_params
-  #   params.require(:journey).permit(:starting_point, :ending_point)
-  # end
+  def journey_params
+    params.require(:journey).permit(:starting_point, :ending_point)
+  end
+
 end

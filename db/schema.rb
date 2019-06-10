@@ -14,8 +14,8 @@ ActiveRecord::Schema.define(version: 2019_06_04_104642) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "journeys", force: :cascade do |t|
+journeys
+  create_table "", force: :cascade do |t|
     t.string "starting_point"
     t.string "ending_point"
     t.string "footprint"
