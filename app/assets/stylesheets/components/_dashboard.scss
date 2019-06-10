@@ -18,6 +18,7 @@ i {
   font-size: 15px;
 }
 
+// fond vert
 .tab-pane {
   justify-content: space-around;
   align-items: center;
@@ -30,19 +31,24 @@ i {
   border-radius: 12px;
 }
 
+//cercle avec les logos blancs
+
 .first-row-infos-circle {
   display: flex;
   justify-content: space-between;
-  margin-top :20px;
-  padding: 22px 49px;
+  margin-top :49px;
+  padding: 22px 32px;
+  font-size :12px;
 }
 
+//  pictogrammes
 .circle-card-picto {
   background: white;
-  height : 70px;
-  width: 70px;
+  background-position: absolute;
+  height : 100px;
+  width: 100px;
   border-radius: 150px;
-  padding: 16px;
+  padding: 20px;
   justify-content: center;
     i {
     font-size: 32px;
@@ -50,31 +56,40 @@ i {
       }
 }
 
+// infos grand grad
 .first-row-infos-text {
-  display: flex;
-  justify-content: space-between;
-  margin-top :0px;
-  padding: 5px 56px;
-  font-family:tahoma, sans-serif;
-  font-weight: 500px;
-  font-size: 18px;
- line-height: 12px;
- text-align: center;
- color: #6B6770;
+    display: flex;
+    justify-content: space-between;
+    background-position: relative;
+    margin-top: -74px;
+    padding: 10px 40px;
+    font-family: tahoma, sans-serif;
+    font-weight: 533px;
+    font-size: 21px;
+    line-height: 9px;
+    text-align: center;
+    color: #6B6770;
+    margin-left: -3px;
+    font-weight: 400;
 }
 
+// infos petit
 .second-row-infos-text {
-  display: flex;
-  justify-content: space-between;
-  margin-top :0px;
-  padding: 8px 42px;
-  font-family:tahoma, sans-serif;
-  font-weight: 500px;
-  font-size: 10px;
-  line-height: 12px;
-  text-align: center;
-  color: #6B6770;
+    display: flex;
+    justify-content: space-between;
+    background-position: relative;
+    margin-top: -51px;
+    padding: 5px 56px;
+    font-family: tahoma, sans-serif;
+    font-weight: 500px;
+    font-size: 13px;
+    line-height: 12px;
+    text-align: center;
+    color: #6B6770;
+    margin-right: -35px;
 }
+
+// container
 
 .container-historical-journey {
   border-radius: 35px;
@@ -127,4 +142,38 @@ i {
     margin-top: -45px;
     color: #6B6770;
 }
+
+.text-card-1 {
+  background: #D2FCD1;;
+  height : 80px;
+  width: 80px;
+  margin-left:24px;
+  border-radius: 150px;
+  box-shadow: 4px 7px 11px white;
+  padding: 20px;
+  justify-content: center;
+    i {
+    font-size: 32px;
+    color: #69B578;
+      }
+}
+
+.text-card-2 {
+  background: #D2FCD1;;
+  height : 80px;
+  width: 80px;
+  border-radius: 150px;
+  padding: 20px;
+  margin-right:-26px;
+  box-shadow: 4px 7px 11px white;
+  justify-content: center;
+    i {
+    font-size: 32px;
+    color: #69B578;
+      }
+}
+
+
+
+
 

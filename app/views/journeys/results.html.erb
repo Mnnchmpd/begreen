@@ -16,7 +16,7 @@
               <% if result["travel_mode"] == "driving" %>
                 <% button_name = 'Voiture' %>
 
-                <%= (result["routes"][0]["legs"][0]["distance"]["text"]).to_f * 206 %> g
+                <%= (result["routes"][0]["legs"][0]["distance"]["text"]).to_f * 206 %> g CO2 émis
                 <%= image_tag "1BCjpg.jpg", class: "avatar-two" %>
               <% elsif result["travel_mode"] == "walking" %>
                 <% button_name = 'Marche' %>

@@ -8,11 +8,7 @@ Rails.application.routes.draw do
   # post "/results", to: "journeys#results"
 
   post "/details/:travel_mode", to: "journeys#details", as: "details"
-  # resources :journeys, only: [:create]
-  # resources :journeys, only: [:index, :update, :show, :new, :create] do
-  #   collection do
-  #     get :detail
-  #   end
+  resources :journeys, only: [:create]
 
 
   # end
