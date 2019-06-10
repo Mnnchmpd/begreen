@@ -1,14 +1,10 @@
-<div class="card-recap-journey">
-  <div class="card-recap-journey-infos">
-    <img class="img-RER-D" src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Paris_RER_D_icon.svg">
-    <h2>Duration</h2>
-  </div>
-</div>
 <div
   id="map"
   style="width: 100%;
   height: 600px;"
   data-markers="<%= @markers.to_json %>"
+  data-steps="<%= @map_steps.to_json %>"
+
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
 <div class="journey-detail-card" id="accordionExample"><a href="#" class="text-decoration-none">
@@ -33,10 +29,6 @@
         </div>
     <% end %>
   </div>
-
-
-
-
 
        <!--  <h3>Marcher jusqu'à la station <i class="fas fa-arrow-circle-right"></i>Bréguet-Sabin</h3> -->
 

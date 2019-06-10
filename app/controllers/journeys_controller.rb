@@ -1,5 +1,4 @@
 class JourneysController < ApplicationController
-
   def results
     @starting_point = params["journey"]["starting_point"]
     @ending_point = params["journey"]["ending_point"]
@@ -14,7 +13,7 @@ class JourneysController < ApplicationController
       result
     end
   end
-  
+
   def details
     @starting_point = params["starting_point"]
     @ending_point = params["ending_point"]
@@ -23,6 +22,9 @@ class JourneysController < ApplicationController
       @steps.first["start_location"],
       @steps.last["end_location"]
     ]
+    @map_steps = @steps.map do |s|
+      [s["start_location"].values.reverse, s["end_location"].values.reverse]
+    end.flatten(1)
   end
 
   # def create
