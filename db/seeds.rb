@@ -9,3 +9,25 @@
 # Journey.create(starting_point: '16 Villa Gaudelet, Paris', ending_point: 'Antony', footprint: '3000g', duration: '30min', date: '05/06/2019', user_id: 1)
 
 # puts 'Finished!'
+
+puts "Destroying all journeys..."
+Journey.destroy_all
+
+require 'csv'
+csv_options = { col_sep: ';', headers: :first_row }
+filepath    = 'db/adress_begreen.csv'
+
+puts "Creating journeys from CSV file..."
+
+CSV.foreach(filepath, csv_options) do |row|
+  Journey.create!(
+    starting_point: row[0],
+    ending_point: row[1],
+    footprint: rand(0..400),
+    date: row[2],
+    user_id: 1,
+    )
+end
+
+puts "All done!"
+
