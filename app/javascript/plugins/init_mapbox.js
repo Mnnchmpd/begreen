@@ -26,7 +26,6 @@ const initMapbox = () => {
     })
 
     fitMapToMarkers(map, markers);
-
     const steps = JSON.parse(mapElement.dataset.steps);
     setTimeout(() => {
       itineraire(map, steps);
@@ -37,6 +36,8 @@ const initMapbox = () => {
 const itineraire = (map, steps) => {
  // check if the route is already loaded
 //  const currentLocationControl = document.querySelector('.mapboxgl-ctrl-geolocate');
+
+// console.log(currentLocationControl).
 // console.log(currentLocationControl);
   console.log(map.getSource('route'));
   // const allSteps = steps.routes[0].geometry.coordinates;
