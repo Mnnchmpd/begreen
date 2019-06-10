@@ -1,39 +1,37 @@
-<h1 class="text-center-article">What is footprint ?</h1>
-    <div class="container">
+<div class="background-home">
+<div class="container">
+<h1 class="text-center-article">Reduce your carbon footprint</h1>
+ <div class="form-where-we-go">
+    <h3>Where ? </h3>
+            <%= simple_form_for @result, url: results_path, method: :get do |f| %>
+            <%= f.input :starting_point, label: false, placeholder: "start"  %>
+            <%= f.input :ending_point, label: false, placeholder: "end" %>
+    <div class="form-group">
+        <h3> When ?</h3>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>Now</option>
+            <option>In 30 minutes</option>
+            <option>In an hour ?</option>
+            <option>Tomorrow</option>
+            </select>
+          <div class="btn btn-outline-success my-2 my-sm-0 " >
+              <%= f.submit "let's go" %>
+         </div>
+        <% end %>
+  </div>
+    </div>
       <div class="card-white">
-        <div class="card-white-top">
-          <div class="card-white-img">
-            <a href="http://huet.blog.lemonde.fr/2019/03/27/nouveau-pic-demissions-de-co2-en-2018/"><button type="button" class="btn btn-light">En savoir plus</button></a>
-          </div>
-          <p>L’Agence internationale de l’énergie vient de publier son rapport annuel pour 2018. Il pointe une vigoureuse croissance des émissions de CO2 liées à l’énergie fossile, avec 1,7% de hausse sur 2017. Et un volume historiquement haut de 33,1 milliards de tonnes de CO2 émises dans l’atmosphère.<p>
+          <div class="card-white-img"></div>
+            <div class="card-white-top">
+              <p>L’Agence internationale de l’énergie vient de publier son rapport annuel pour 2018. Il pointe une vigoureuse croissance des émissions de CO2 liées à l’énergie fossile, avec 1,7% de hausse sur 2017.
+              <a href="http://huet.blog.lemonde.fr/2019/03/27/nouveau-pic-demissions-de-co2-en-2018/">Read more</a></p>
+            </div>
           <ul class="list-inline">
             <li><i class="fas fa-eye"></i>90</li>
             <li><i class="fas fa-comment"></i>109</li>
             <li><i class="fas fa-heart"></i>306</li>
           </ul>
-        </div>
 
-    <div class="test">
-      <div>
-          <h3>Where ? </h3>
-            <%= simple_form_for @result, url: results_path, method: :get do |f| %>
-            <%= f.input :starting_point, placeholder: "D'où tu pars ?" %>
-            <%= f.input :ending_point, placeholder: "Où vas-tu ?" %>
-              <div class="form-group">
-                <h3> When ?</h3>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>Maintenant</option>
-                  <option>Dans 30 minutes</option>
-                  <option>Dans une heure ?</option>
-                  <option>Demain</option>
-                </select>
-              </div>
-
-
-              <div class="btn btn-outline-success my-2 my-sm-0" >
-              <%= f.button :submit %>
-              </div>
-            <% end %>
       </div>
-    </div>
-  </div>
+</div>
+</div>
