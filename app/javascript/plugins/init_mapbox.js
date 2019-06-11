@@ -15,8 +15,11 @@ const initMapbox = () => {
 
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10'
+      style: 'mapbox://styles/mapbox/streets-v10',
+      center: [0, 0],
+      zoom: 0.5
     });
+    map.scrollZoom.disable();
 
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {

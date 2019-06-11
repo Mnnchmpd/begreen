@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <h3> You forgot to add your journey? Don't worry, complete this form and add it to your profile!</h3>
+      <div class="col-md-8">
+
+  <%= simple_form_for @journey do |f| %>
+    <%= f.input :starting_point, input_html: { value: @starting_point } %>
+    <%= f.input :ending_point, input_html: { value: @ending_point } %>
+    <%= f.input :travel_mode, input_html: { value: @travel_mode } %>
+
+  <%= f.submit %>
+  <% end %>
+  </div>
+
+  <%= link_to "Back to my dashboard", dashboard_path, class: "back-btn" %>
+
+</div>
+

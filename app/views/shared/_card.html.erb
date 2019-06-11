@@ -1,4 +1,4 @@
-  <div class="card">
+   <div class="card">
     <div class="card-header" id="heading<%= journey.id %>">
       <h2 class="mb-0">
         <button class="btn btn-link collapsed button-link-journey" type="button" data-toggle="collapse" data-target="#collapse<%= journey.id %>" aria-expanded="false" aria-controls="collapse<%= journey.id %>">
@@ -16,7 +16,17 @@
             </div>
             <div class= "ending-point-journey-historical">
               <i class="fas fa-circle ending-point"></i>
-              <div class= "ending-point"><%= journey.ending_point %></div>
+              <div class="ending-point"><%= journey.ending_point %></div>
+            </div>
+
+            <div class= "ending-point-journey-historical">
+              <i class="fas fa-circle ending-point"></i>
+            <div class="transport"><%= journey.travel_mode %></div>
+            </div>
+            <div class= "ending-point-journey-historical">
+              <i class="fas fa-circle ending-point"></i>
+            <div class="transport"><%= journey.distances %></div>
+
             </div>
           </div>
         </div>
