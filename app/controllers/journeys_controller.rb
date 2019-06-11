@@ -19,14 +19,26 @@ class JourneysController < ApplicationController
     @starting_point = params["starting_point"]
     @ending_point = params["ending_point"]
     @steps = JSON.parse(params["steps"])
+    @travel_mode = params["travel_mode"]
+    @distance = 0
+    @steps.each do |s|
+      @distance += s["distance"]["text"].split(" ")[0].to_f if "km" == s["distance"]["text"].split(" ")[1]
+      @distance += s["distance"]["text"].split(" ")[0].to_f / 1000 if "m" == s["distance"]["text"].split(" ")[1]
+    end
+    # @distances = params["routes"][0]["legs"][0]["distance"]["text"]
+
     @markers = [
       @steps.first["start_location"],
       @steps.last["end_location"]
     ]
-
     @map_steps = @steps.map do |s|
       [s["start_location"].values.reverse, s["end_location"].values.reverse]
     end.flatten(1)
+
+  end
+
+  def new
+    @journey = Journey.new
   end
 
   def create
@@ -40,6 +52,6 @@ class JourneysController < ApplicationController
   end
 
   def journey_params
-    params.require(:journey).permit(:starting_point, :ending_point)
+    params.require(:journey).permit(:starting_point, :ending_point, :travel_mode, :distances)
   end
 end
