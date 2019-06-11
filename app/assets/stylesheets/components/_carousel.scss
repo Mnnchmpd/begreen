@@ -1,0 +1,19 @@
+.carousel-caption p {
+  background-color: white;
+  color : black;
+}
+
+.carousel-caption {
+  position: sticky;
+  bottom: 21px;
+  z-index: 10;
+  // padding-top: 20px;
+  // padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.carousel-control-prev-icon {
+  color: green;
+}
