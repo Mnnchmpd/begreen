@@ -5,8 +5,7 @@ class JourneysController < ApplicationController
     travel_mode = ["driving", "walking", "bicycling", "transit"]
 
     @results = travel_mode.map do |mode|
-      result_api = RestClient.get("https://maps.googleapis.com/maps/api/directions/json?
-  &mode=#{mode}&origin=#{@starting_point}&destination=#{@ending_point}&key=#{ENV['GOOGLE_API_SERVER_KEY']}")
+      result_api = RestClient.get("https://maps.googleapis.com/maps/api/directions/json?&mode=#{mode}&origin=#{@starting_point.gsub(/[^[:ascii:]]/, '')}&destination=#{@ending_point.gsub(/[^[:ascii:]]/, '')}&key=#{ENV['GOOGLE_API_SERVER_KEY']}")
 
       result = JSON.parse(result_api)
       result["travel_mode"] = mode

@@ -1,6 +1,11 @@
 
+.i {
+  //font-family:tahoma, sans-serif;
+}
+
+
 h1 {
-  font-family: 'Lobster', cursive;
+  //font-family: 'Lobster', cursive;
   font-size: 40px;
   color: #4DAA57;
   text-align: center;
@@ -8,11 +13,17 @@ h1 {
 }
 
 h2 {
+
+  //font-family:tahoma, sans-serif;
+
   font-size: 8px;
   color: #4DAA57;
 }
 
 h3 {
+
+  //font-family:tahoma, sans-serif;
+
   font-size: 17px;
   color:  #4DAA57;
 }
@@ -36,6 +47,11 @@ li {
 
 i {
   color: #7CA982;
+}
+
+.container h1 {
+  color: white;
+  padding-top: 30px;
 }
 
 
