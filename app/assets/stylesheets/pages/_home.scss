@@ -1,6 +1,6 @@
-.text-center-article {
-
-
+.text {
+  color: white;
+  margin-top: 40px;
 }
 
 .card-white {
@@ -11,13 +11,13 @@
   padding: 10px;
 }
 
-.card-white-img {
-  background-image: url(https://images.unsplash.com/photo-1470137430626-983a37b8ea46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
-  background-size: cover;
-  height: 20vh;
-  text-align: center;
-  padding-top: 40vh;
-}
+// .card-white-img {
+//   background-image: url();
+//   background-size: cover;
+//   height: 20vh;
+//   text-align: center;
+//   padding-top: 40vh;
+// }
 
 .li {
     display: list-item;
@@ -55,13 +55,20 @@
 }
 
 .form-where-we-go {
-  margin-top: 30px;
+  margin-top: 80px;
+}
+
+.form-where-we-go h3 {
+  color: white;
+  font-size: 18px;
 }
 
 .background-home {
   background-image: url('leaves.jpg');
   position: absolute;
   margin-left: -20px;
+  margin-top: -20px;
+  height: 100vh;
 
 }
 
