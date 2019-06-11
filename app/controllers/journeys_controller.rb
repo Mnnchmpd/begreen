@@ -23,6 +23,7 @@ class JourneysController < ApplicationController
       @steps.first["start_location"],
       @steps.last["end_location"]
     ]
+
     @map_steps = @steps.map do |s|
       [s["start_location"].values.reverse, s["end_location"].values.reverse]
     end.flatten(1)
@@ -36,11 +37,9 @@ class JourneysController < ApplicationController
     else
       render :details
     end
-
   end
 
   def journey_params
     params.require(:journey).permit(:starting_point, :ending_point)
   end
-
 end

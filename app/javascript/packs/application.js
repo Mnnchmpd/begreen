@@ -9,7 +9,10 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 import Chart from 'chart.js';
 
-  var ctxL = document.getElementById("lineChart").getContext('2d');
+  var ctxL = document.getElementById("lineChart")
+
+if (ctxL) {
+  ctxL .getContext('2d');
   var myLineChart = new Chart(ctxL, {
     type: 'line',
     data: {
@@ -31,6 +34,7 @@ import Chart from 'chart.js';
       responsive: true
     }
   });
+}
 
 
 initMapbox();

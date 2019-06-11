@@ -8,6 +8,5 @@ class PagesController < ApplicationController
   def dashboard
     @user = current_user
     @journeys = Journey.where(user: current_user)
-    raise
   end
 end
