@@ -11,29 +11,31 @@
     <li><i class="fas fa-leaf"></i> Start my Green Journey</li>
     <% @steps.each do |step| %>
       <div class="first-header" id="headingOne">
-        <h2 class="mb-0">
+        <h4 class="mb-0">
           <li><i class="fas fa-leaf"></i> <%= step["travel_mode"] %>
             <%= step["duration"]["text"] %> </li>
-        </h2>
+        </h4>
       </div>
   </div>
   <div class="detail-card">
         <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
             <div class="card-body">
-              <h3>
+              <h5>
               <%= step["html_instructions"].html_safe %>
               <%= step["distance"]["text"] %>
-            </h3>
+            </h5>
             </div>
         </div>
     <% end %>
   </div>
 </div>
-  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-    <%= link_to "Done", dashboard_path, class: "nav-link" %></button>
 
   <%= simple_form_for @journey do |f| %>
     <%= f.input :starting_point, input_html: { value: @starting_point }, as: :hidden %>
     <%= f.input :ending_point, input_html: { value: @ending_point }, as: :hidden  %>
-  <%= f.submit %>
+    <%= f.input :travel_mode, input_html: { value: @travel_mode }, as: :hidden  %>
+    <%= f.input :distances, input_html: { value: @distance }, as: :hidden  %>
+  <div class="btn btn-outline-success">
+    <%= f.submit "Done" %>
+  </div>
   <% end %>

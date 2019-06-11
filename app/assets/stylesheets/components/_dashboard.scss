@@ -27,8 +27,9 @@ i {
   margin-top: 10px;
   margin-left: 20px;
   display: flex;
-  background: #E1F4E8;
+  background: white;
   border-radius: 12px;
+
 }
 
 //cercle avec les logos blancs
@@ -60,11 +61,8 @@ i {
 .first-row-infos-text {
     display: flex;
     justify-content: space-between;
-    background-position: relative;
     margin-top: -74px;
     padding: 10px 40px;
-    font-family: tahoma, sans-serif;
-    font-weight: 533px;
     font-size: 21px;
     line-height: 9px;
     text-align: center;
@@ -100,9 +98,11 @@ i {
 }
 
 .card-body {
-  i {
+  .fa-circle:before {
+    margin-left: -53px;
     color:#69B578;
     margin-bottom: 10px;
+
   }
 }
 
@@ -111,10 +111,19 @@ i {
   margin-left: 63px;
 }
 
+.accordion > .card:first-of-type {
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.accordion > .card:last-of-type {
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
 .starting-point-journey-historical {
   display: flex;
   justify-content: space-between;
-  padding: 38px 71px;
+  padding: 34px 18px;
   line-height: 13px;
   text-align: center;
   margin-top: -57px;
@@ -122,6 +131,16 @@ i {
   color: #6B6770;
 }
 
+.ending-point-journey-historical {
+    display: flex;
+    justify-content: space-between;
+    padding: 34px 18px;
+    line-height: 12px;
+    text-align: center;
+    margin-bottom: -46px;
+    margin-top: -45px;
+    color: #6B6770;
+}
 .starting-point {
       margin-top: 10px;
       font-size: 15px;
@@ -132,16 +151,6 @@ i {
       padding: -4px;
     }
 
-.ending-point-journey-historical {
-    display: flex;
-    justify-content: space-between;
-    padding: 31px 71px;
-    line-height: 12px;
-    text-align: center;
-    margin-bottom: -46px;
-    margin-top: -45px;
-    color: #6B6770;
-}
 
 .text-card-1 {
   background: #D2FCD1;;
@@ -173,7 +182,15 @@ i {
       }
 }
 
+//stats
 
+.lineChart {
+  margin-top: 49px;
+}
+
+.body {
+  background-color: green;
+}
 
 
 
