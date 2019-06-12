@@ -11,14 +11,6 @@
   padding: 10px;
 }
 
-// .card-white-img {
-//   background-image: url();
-//   background-size: cover;
-//   height: 20vh;
-//   text-align: center;
-//   padding-top: 40vh;
-// }
-
 .li {
     display: list-item;
 
@@ -46,16 +38,22 @@
 
 .page-down-footer {
   min-height: calc(100vh - 96px);
-  margin: 12px;
+  // margin: 12px;
 }
 
-.container {
-  margin-top: 30px;
+.container-first-screen {
   padding-left: 23px;
+  padding-right: 23px;
+  height: calc(100vh + 65px);
+}
+
+.container-first-screen h1 {
+  color: white;
+  padding-top: 40px;
 }
 
 .form-where-we-go {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 .form-where-we-go h3 {
@@ -64,11 +62,7 @@
 }
 
 .background-home {
-
-  position: absolute;
-  margin-left: -20px;
-  margin-top: -20px;
-  height: 100vh;
+  background-attachment:fixed;
 
 }
 
@@ -77,3 +71,13 @@
   justify-content: center;
 }
 
+.form-where-we-go {
+  margin-top: 80px;
+}
+
+
+.carousel-container {
+  margin-left: 23px;
+  margin-right: 23px;
+  height: 70vh;
+}
