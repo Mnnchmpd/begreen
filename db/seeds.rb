@@ -12,6 +12,9 @@
 
 puts "Destroying all journeys..."
 Journey.destroy_all
+User.destroy_all
+
+User.create!(email: "manon@gmail.com", password: "manon6")
 
 require 'csv'
 csv_options = { col_sep: ';', headers: :first_row }
@@ -25,7 +28,7 @@ CSV.foreach(filepath, csv_options) do |row|
     ending_point: row[1],
     footprint: rand(0..400),
     date: row[2],
-    user_id: 1,
+    user: User.last,
     )
 end
 
