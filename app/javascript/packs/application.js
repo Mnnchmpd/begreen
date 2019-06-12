@@ -17,7 +17,7 @@ if (ctxL) {
   var myLineChart = new Chart(ctxL, {
     type: 'line',
     data: {
-      labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
       datasets: [{
           label: "Mes empreintes carbonnes",
           data: [65, 59, 80, 81, 56, 55, 40],
