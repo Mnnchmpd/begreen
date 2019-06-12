@@ -2,20 +2,30 @@
   background : white;
  }
 
+//navbar du dashboard
 .nav-link {
   border-radius: 8px;
   font-size: 13px;
-  color: #4DAA57;
+  color: white;
+  font-weight: bold;
 }
 
 .nav-tabs {
   height: 50px;
-  background : white;
+  background: #4CAF50;
 }
 
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: white;
+    background-color: #4CAF50;
+    border-color: #4CAF50 #4CAF50 #4CAF50;
+    font-weight: bold;
+    margin-left: 31px;
+
+}
 i {
-  color: #7CA982;
-  font-size: 15px;
+  color: white;
+  font-size: 22px;
 }
 
 // fond vert
@@ -29,6 +39,7 @@ i {
   display: flex;
   background: white;
   border-radius: 12px;
+  height: 522px;
 
 }
 
@@ -43,12 +54,16 @@ i {
 }
 
 //  pictogrammes
-.circle-card-picto {
-  background: #E2E2E0;
+.circle-card-picto-1 {
+  background: white;
   background-position: absolute;
-  height : 100px;
-  width: 100px;
-  border-radius: 150px;
+  border: 1px solid #249D50;
+  height : 88px;
+  border-color: green;
+  width: 145px;
+
+  margin-left: -29px;
+  width: 242px;
   padding: 20px;
   justify-content: center;
     i {
@@ -57,6 +72,37 @@ i {
       }
 
 }
+
+.circle-card-picto-2 {
+  background: white;
+  background-position: absolute;
+  border: 1px solid #249D50;
+  height : 88px;
+  border-color: green;
+  width: 145px;
+  margin-left: 125px;
+  width: 149px;
+  padding: 20px;
+  justify-content: center;
+    i {
+    font-size: 32px;
+    color: #69B578;
+      }
+
+}
+
+
+
+
+
+
+
+
+
+
+.fa-leaf:before {
+    font-size: 45px;
+  }
 
 // infos grand grad
 .first-row-infos-text {
@@ -220,3 +266,5 @@ i {
     margin-left: -12px;
     margin-top: 50px;
 }
+
+
