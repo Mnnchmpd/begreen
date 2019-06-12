@@ -26,11 +26,11 @@
 
     <!-- NOMBRE DE TRAJETS EN KM ET STATUS UTILISATEUR -->
     <div class="first-row-infos-text">
-      <div class="text-card-1"> <%= @total_distances.to_i %> km  </div>
+      <div class="text-card-1"> <%= @total_distances.to_i %></div>
       <div class="text-card-2"> Bgreen</div>
     </div>
     <div class="second-row-infos-text">
-      <div class="text-card">Traveled</div>
+      <div class="text-card"> Kms traveled</div>
       <div class="text-card">Status</div>
     </div>
     <div class="first-row-infos-circle">
@@ -39,12 +39,12 @@
     </div>
     <!-- EMISSION DE CARBONE EMIS ET NOMBRE DE TRAJETS -->
     <div class="first-row-infos-text">
-      <div class="text-card-1"> <%= @car_indices+ @transit_indices %> kg</div>
+      <div class="text-card-1"> <%= @car_indices.round+ @transit_indices.round %></div>
       <div class="text-card-2"> <%= @journeys.count %> </div>
     </div>
     <div class="second-row-infos-text">
-      <div class="text-card">CO2 saved</div>
-      <div class="text-card">Journeys</div>
+      <div class="text-card"> Kg CO2 saved</div>
+      <div class="text-card">  Journeys</div>
     </div>
   <!-- Ici la vue de l'historique des trajets  -->
   </div>
