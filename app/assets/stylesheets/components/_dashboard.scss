@@ -44,7 +44,7 @@ i {
 
 //  pictogrammes
 .circle-card-picto {
-  background: white;
+  background: grey;
   background-position: absolute;
   height : 100px;
   width: 100px;
@@ -55,6 +55,7 @@ i {
     font-size: 32px;
     color: #69B578;
       }
+
 }
 
 // infos grand grad
@@ -80,11 +81,12 @@ i {
     padding: 5px 56px;
     font-family: tahoma, sans-serif;
     font-weight: 500px;
-    font-size: 13px;
+    font-size: 10px;
     line-height: 12px;
     text-align: center;
     color: #6B6770;
-    margin-right: -35px;
+    margin-right: -25px;
+    margin-top: -46px;
 }
 
 // container
