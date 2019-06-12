@@ -1,5 +1,5 @@
 <!-- Ici tous les pictos de la vue infos du dashboard -->
- <div class="add-button">
+<div class="add-button">
   <%= link_to "Add a Journey", new_journey_path, class: "nav-link" %>
 </div>
 <div class="tab-content" id="nav-tabContent">
@@ -14,9 +14,7 @@
         <p class="circle-info-datatype">Traveled</p>
       </div>
     </div>
-
  -->
-
     <div class="first-row-infos-circle">
       <div class="circle-card-picto">
         <i class="fas fa-road"></i>
@@ -41,27 +39,15 @@
     </div>
     <!-- EMISSION DE CARBONE EMIS ET NOMBRE DE TRAJETS -->
     <div class="first-row-infos-text">
-      <div class="text-card-1"> <%= @car_indices + @transit_indices %> kg</div>
+      <div class="text-card-1"> <%= @car_indices+ @transit_indices %> kg</div>
       <div class="text-card-2"> <%= @journeys.count %> </div>
     </div>
     <div class="second-row-infos-text">
       <div class="text-card">CO2 saved</div>
       <div class="text-card">Journeys</div>
     </div>
-    <div class="first-row-infos-circle">
-      <div class="circle-card-picto"><i class="fas fa-walking"></i></div>
-      <div class="circle-card-picto"><i class="fas fa-trophy"></i></div>
-    </div>
-    <div class="first-row-infos-text">
-      <div class="text-card-1"> </div>
-      <div class="text-card-2"> 355 </div>
-    </div>
-    <div class="second-row-infos-text">
-      <div class="text-card">challenge</div>
-      <div class="text-card">Bgreenor</div>
-    </div>
-  </div>
   <!-- Ici la vue de l'historique des trajets  -->
+  </div>
   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
     <div class="accordion" id="accordionJourney">
       <% @user.journeys.each do |journey| %>
@@ -69,25 +55,8 @@
       <% end %>
     </div>
   </div>
+
   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
     <canvas id="lineChart" width="150" height="130"></canvas>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- </div> -->
