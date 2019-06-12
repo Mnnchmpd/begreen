@@ -1,7 +1,7 @@
 <div class="background-home" style="background-image: url(<%= image_path 'leaves.jpg' %>)">
 <div class="container">
 <h1 class="text-center-article">Reduce your carbon footprint</h1>
- <div class="form-where-we-go">
+ <div class="form-where-we-go autocomplete-form">
     <h3>Where ? </h3>
             <%= simple_form_for @result, url: results_path, method: :get do |f| %>
             <%= f.input :starting_point, label: false, placeholder: "start"  %>
