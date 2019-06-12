@@ -38,13 +38,14 @@ class JourneysController < ApplicationController
 
   def new
     @journey = Journey.new
+
   end
 
   def create
     @journey = Journey.new(journey_params)
     @journey.user = current_user
     if @journey.save
-      redirect_to card_path
+      redirect_to dashboard_path
     else
       render :details
     end

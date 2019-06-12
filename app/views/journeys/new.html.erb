@@ -7,9 +7,13 @@
         <%= f.input :starting_point, input_html: { value: @starting_point } %>
         <%= f.input :ending_point, input_html: { value: @ending_point } %>
         <%= f.input :travel_mode, collection: ["🚗 Car", "🚎 Public transportation", "🚲 Bicycle", "🚶‍♀️ Walk"], input_html: { class: 'select2' } %>
-        <%= render 'pages/calendar' %>
+
+            <%= f.input :date, as: :string, placeholder: 'debut', required: false, input_html: {class: "datepicker"} %>
+            <%#= f.input :date, as: :string, required: false, placeholder: 'fin', input_html: {class: "datepicker"} %>
+
         <%= f.button :submit, class: "btn btn-sm success" %>
       <% end %>
+<%#= render 'pages/calendar' %>
     </div>
    </div>
 
