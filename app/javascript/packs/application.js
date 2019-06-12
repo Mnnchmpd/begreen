@@ -1,12 +1,16 @@
 import "bootstrap";
+import "../plugins/flatpickr";
 import $ from 'jquery';
 import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
 import { initMapbox } from '../plugins/init_mapbox';
+import { initSelect2 } from '../plugins/init_select2';
 
 import { initAutocomplete } from '../plugins/init_autocomplete'
 import Chart from 'chart.js';
 
-  var ctxL = document.getElementById("lineChart")
+initSelect2();
+
+var ctxL = document.getElementById("lineChart")
 
 if (ctxL) {
   ctxL .getContext('2d');

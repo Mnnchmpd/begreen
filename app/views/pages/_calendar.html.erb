@@ -1,0 +1,14 @@
+
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <h4>
+
+
+
+
+          <%= simple_form_for @journey do |f| %>
+            <%= f.input :date, as: :string, placeholder: 'debut', required: false, input_html: {class: "datepicker"} %>
+            <%= f.input :date, as: :string, required: false, placeholder: 'fin', input_html: {class: "datepicker"} %>
+
+          <% end %>
+      </h4>
+  </div>

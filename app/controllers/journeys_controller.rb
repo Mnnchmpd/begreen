@@ -44,7 +44,7 @@ class JourneysController < ApplicationController
     @journey = Journey.new(journey_params)
     @journey.user = current_user
     if @journey.save
-      redirect_to dashboard_path
+      redirect_to card_path
     else
       render :details
     end
