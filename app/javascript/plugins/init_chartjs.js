@@ -19,6 +19,8 @@ const initChart = () => {
             borderColor: [
               '#2E3035',
             ],
+            borderColor: '#4CAF50',
+            backgroundColor: "#4caf504d",
             borderWidth: 3
           },
         ]

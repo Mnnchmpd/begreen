@@ -61,7 +61,7 @@ nav i {
     align-right: 11%;
     margin-right: -8%;
 
-  }
+}
 
 .fa-leaf:before {
     font-size: 45px;
@@ -176,7 +176,7 @@ nav i {
   margin-bottom: 18px;
 }
 // progress bar challenge
-.progress {
+.progress-challenge {
   display: flex;
   height: 1rem;
   overflow: hidden;
@@ -187,7 +187,7 @@ nav i {
   margin-left: 35px;
 }
 // progress bar challenge
-.progress-bar {
+.progress-bar-challenge {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -257,5 +257,18 @@ nav i {
 
 .progress {
   margin-top: 15px;
+  margin-left: 30px;
+  width: 83%;
 }
 
+.bg-green {
+  background: #249D50;
+}
+
+.bg-orange {
+  background: #fb7c31;
+}
+
+.bg-red {
+  background: #FF6161;
+}

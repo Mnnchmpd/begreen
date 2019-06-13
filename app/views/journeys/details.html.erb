@@ -15,14 +15,13 @@
     <%= f.input :travel_mode, input_html: { value: @travel_mode }, as: :hidden  %>
     <%= f.input :distances, input_html: { value: @distance }, as: :hidden  %>
 
-    <%= f.submit "Add", class: "btn btn-outline-success" %>
+    <%= f.submit "Add my trip to my profile", class: "btn-detail" %>
 
   <% end %>
 <div class="detail-card">
-  <div class="fas fa-leaf" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> </div>
+  <div class="green-journey collapsed" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Start my Green Journey <i class="fas fa-chevron-up"></i></div>
 
-<li> Start my Green Journey</li>
-<div class="collapse" id="collapseExample">
+  <div class="collapse" id="collapseExample">
     <% @steps.each do |step| %>
 <!--       <div class="first-header" id="headingOne">
         <h4 class="mb-0">
@@ -34,14 +33,15 @@
   <div class="detail-card">
         <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
             <div class="card-body"> -->
-              <h5>
-<%= step["distance"]["text"] %>
-            <%= step["html_instructions"].html_safe %>
+            <h5>
+              <%= step["distance"]["text"] %>
+              <%= step["html_instructions"].html_safe %>
             </h5>
        <!--      </div>
         </div> -->
     <% end %>
   </div>
+</div>
 </div>
 
 

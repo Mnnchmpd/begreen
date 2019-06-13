@@ -4,6 +4,8 @@
 
 .background-new {
   height:100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
  }
 
 
@@ -15,4 +17,16 @@
   opacity: 0.8;
 
 }
+
+.btn-new {
+  border-radius:12px 0 12px 0;
+  border:none;
+  color:#0E0000;
+  font-family:tahoma, sans-serif;
+  padding:1px 0 6px 0;
+  border: 1px solid #249D50;
+  position: relative;
+  left: 5%;
+}
+
 
