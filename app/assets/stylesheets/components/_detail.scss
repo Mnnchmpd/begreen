@@ -30,4 +30,28 @@
   }
 }
 
+.btn-detail {
+  border-radius: 12px 0 12px 0;
+  border: solid #b5dda4 1px;
+  padding: 10px !important;
+  margin-bottom: 16px;
+  color: #0E0000;
+  font-family: tahoma, sans-serif;
+  background: transparent;
+  margin-bottom: 32px;
+}
 
+.green-journey {
+  color: #0d0000;
+  margin-bottom: 16px;
+
+  i {
+    transition: transform .3s ease;
+  }
+
+  &.collapsed {
+    i {
+      transform: rotate(180deg);
+    }
+  }
+}

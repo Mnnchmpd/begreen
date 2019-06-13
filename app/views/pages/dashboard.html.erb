@@ -14,6 +14,7 @@
           </div>
         </div>
       -->
+       <%= link_to "New Trip", new_journey_path, class: "btn-new btn-outline-success" %>
       <div class="dash-infos-cards">
         <div class="dash-infos-card">
           <img  src="<%= image_path("undraw_environment_iaus.png")%>" class="card-infos-image">
@@ -36,7 +37,7 @@
 
       <div class="first-row-infos-classement">
         <div class="text-card-classement"> kilometers</div>
-        <div class="text-card-rank"> You've travelled 35 kilometers with Begreen</div>
+        <div class="text-card-rank"> You've travelled 185 kilometers with Begreen</div>
       </div>
       <div class="first-row-infos-classement">
         <div class="text-card-classement"> Votre Classement</div>
@@ -44,13 +45,14 @@
       </div>
       <div class="first-row-infos-classement">
         <div class="text-card-classement"> Challenge yourself</div>
-        <div class="progress" style="height: 15px;">
+        <div class="progress-challenge" style="height: 15px;">
+          <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
+         </div>
+        <div class= "pourcentage-challenge">
+            <h5>0 kms</h5>
+            <h6>150kms</h6>
+            <h7>300kms</h7>
         </div>
-      </div>
-      <div class= "pourcentage-challenge">
-        <h5>0 kms</h5>
-        <h6>30kms</h6>
-        <h7>50kms</h7>
       </div>
      <!--  <div class="text-card-challenge"> Il vous rester 30kms à parcourir avec BeGreen pour tenter de gagner un abonnement Vélib d'un an</div>
       </div> -->
@@ -58,7 +60,7 @@
     </div>
 
 
-    <%= link_to "New Travel?", new_journey_path, class: "btn add btn-outline-success" %>
+
 
 
 
@@ -87,7 +89,7 @@
     <!-- Ici la vue de l'historique des trajets  -->
 
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-      <%= link_to "Add a Journey", new_journey_path, class: "btn add btn-outline-success" %>
+      <%= link_to "Add my trip", new_journey_path, class: "btn add btn-outline-success" %>
       <div class="accordion" id="accordionJourney">
         <% @user.journeys.each do |journey| %>
           <%= render "shared/card", journey: journey %>
@@ -107,6 +109,8 @@
         </li>
        </ul>
       <canvas id="lineChart" width="150" height="130"></canvas>
+
+      <%= render "shared/progress_bar" %>
     </div>
   </div>
 
