@@ -8,25 +8,28 @@ const initChart = () => {
     var myLineChart = new Chart(ctxL, {
       type: 'line',
       data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
         datasets: [{
-            label: "Mes empreintes carbonnes",
-            data: [65, 59, 80, 81, 56, 55, 40, 20, 30, 91, 18],
+            label: 'Footprint',
+            data: [8400, 4500, 6600, 10500, 120 ],
             backgroundColor: [
-              'rgba(75, 192, 192, 0.2)',
+              '#7888BF',
+
             ],
             borderColor: [
-              'rgba(75, 192, 192, 1)',
+              '#2E3035',
             ],
-            borderWidth: 0
+            borderWidth: 3
           },
         ]
       },
       options: {
-        responsive: true
+        responsive: true,
       }
     });
   }
 }
 
-export { initChart };
+
+
+export default initChart;

@@ -77,5 +77,5 @@ const itineraire = (map, steps) => {
 };
 
 
-export { initMapbox };
+export default initMapbox;
 
