@@ -1,0 +1,5 @@
+meta_product_name: "Be Green"
+meta_title: "Be Green - Improve your carbon footprint !"
+meta_description: "Be Green helps you make the most eco-responsible choices for your journeys in Paris"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: ""   # required for Twitter Cards
