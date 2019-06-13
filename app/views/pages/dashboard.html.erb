@@ -42,11 +42,10 @@
         <div class="text-card-classement"> Votre Classement</div>
         <div class="text-card-rank"> Vous êtes le 355 ème Beegrenor</div>
       </div>
-
-       <div class="first-row-infos-classement">
+      <div class="first-row-infos-classement">
         <div class="text-card-classement"> Challenge yourself</div>
         <div class="progress" style="height: 15px;">
-        <div class="progress-bar" role="progressbar" style="width: 67%;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
       </div>
       <div class= "pourcentage-challenge">
         <h5>0 kms</h5>
@@ -58,7 +57,7 @@
 
     </div>
 
-  
+
     <%= link_to "New Travel?", new_journey_path, class: "btn add btn-outline-success" %>
 
 
@@ -86,7 +85,7 @@
         <!-- <div class="text-card">  Journeys</div> -->
       <!-- </div> -->
     <!-- Ici la vue de l'historique des trajets  -->
-   
+
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
       <%= link_to "Add a Journey", new_journey_path, class: "btn add btn-outline-success" %>
       <div class="accordion" id="accordionJourney">
@@ -112,8 +111,7 @@
   </div>
 
   <%= render 'shared/dashboard_nav_tabs' if params[:action] == "dashboard" %>
-
-
+</div>
 
 
 
