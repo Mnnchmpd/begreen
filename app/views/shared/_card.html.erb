@@ -14,17 +14,14 @@
           <i class="fas fa-circle starting-point"></i>
           <div class= "starting-point"> <%= journey.starting_point %></div>
         </div>
+        <i class="fas fa-grip-lines-vertical"></i>
         <div class= "ending-point-journey-historical">
           <i class="fas fa-circle ending-point"></i>
           <div class="ending-point"><%= journey.ending_point %></div>
         </div>
-        <div class= "ending-point-journey-historical">
-          <i class="fas fa-circle ending-point"></i>
+        <div class= "travel-mode-journey-historical">
           <div class="transport"><%= journey.travel_mode %></div>
-        </div>
-        <div class= "ending-point-journey-historical">
-          <i class="fas fa-circle ending-point"></i>
-          <div class="transport"><%= journey.distances %></div>
+          <div class="transport"><%= journey.distances %> km</div>
         </div>
       </div>
     </div>

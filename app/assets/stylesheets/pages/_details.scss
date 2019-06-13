@@ -6,10 +6,4 @@ position: absolute;
 margin: 20px;
 }
 
-#pause::after {
-content: 'Pause';
-}
 
-#pause.pause::after {
-content: 'Play';
-}

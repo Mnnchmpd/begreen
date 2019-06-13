@@ -2,20 +2,30 @@
   background : white;
  }
 
+//navbar du dashboard
 .nav-link {
   border-radius: 8px;
-  font-size: 10px;
-  color: #4DAA57;
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
 }
 
 .nav-tabs {
   height: 50px;
-  background : white;
+  background: #4CAF50;
 }
 
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: white;
+    background-color: #4CAF50;
+    border-color: #4CAF50 #4CAF50 #4CAF50;
+    font-weight: bold;
+    margin-left: 31px;
+
+}
 i {
-  color: #7CA982;
-  font-size: 15px;
+  color: white;
+  font-size: 22px;
 }
 
 // fond vert
@@ -23,12 +33,13 @@ i {
   justify-content: space-around;
   align-items: center;
   height: 700px;
-  margin-right: 20px;
-  margin-top: 10px;
-  margin-left: 20px;
+  margin-right: 6px;
+  margin-top: -69px;
+  margin-left: 6px;
   display: flex;
   background: white;
   border-radius: 12px;
+  height: 522px;
 
 }
 
@@ -43,12 +54,16 @@ i {
 }
 
 //  pictogrammes
-.circle-card-picto {
-  background: grey;
+.circle-card-picto-1 {
+  background: white;
   background-position: absolute;
-  height : 100px;
-  width: 100px;
-  border-radius: 150px;
+  border: 1px solid #249D50;
+  height : 88px;
+  border-color: green;
+  width: 145px;
+
+  margin-left: -29px;
+  width: 242px;
   padding: 20px;
   justify-content: center;
     i {
@@ -57,6 +72,37 @@ i {
       }
 
 }
+
+.circle-card-picto-2 {
+  background: white;
+  background-position: absolute;
+  border: 1px solid #249D50;
+  height : 88px;
+  border-color: green;
+  width: 145px;
+  margin-left: 125px;
+  width: 149px;
+  padding: 20px;
+  justify-content: center;
+    i {
+    font-size: 32px;
+    color: #69B578;
+      }
+
+}
+
+
+
+
+
+
+
+
+
+
+.fa-leaf:before {
+    font-size: 45px;
+  }
 
 // infos grand grad
 .first-row-infos-text {
@@ -67,9 +113,10 @@ i {
     font-size: 21px;
     line-height: 9px;
     text-align: center;
-    color: #6B6770;
+    color: #54AF0A;
     margin-left: -3px;
     font-weight: 400;
+    margin-bottom: 37px;
 }
 
 // infos petit
@@ -84,9 +131,9 @@ i {
     font-size: 10px;
     line-height: 12px;
     text-align: center;
-    color: #6B6770;
+    color: #54AF0A;
     margin-right: -25px;
-    margin-top: -46px;
+    margin-top: -96px;
 }
 
 // container
@@ -156,31 +203,33 @@ i {
 
 .text-card-1 {
   background: #D2FCD1;;
-  height : 80px;
-  width: 80px;
+  height : 90px;
+  width: 90px;
   margin-left:24px;
   border-radius: 150px;
   box-shadow: 4px 7px 11px white;
-  padding: 20px;
+  font-weight: bolder;
+  padding: 24px 9px;
   justify-content: center;
     i {
     font-size: 32px;
-    color: #69B578;
+    color: #A4B8C4;
       }
 }
 
 .text-card-2 {
   background: #D2FCD1;;
-  height : 80px;
-  width: 80px;
+  height : 90px;
+  width: 90px;
   border-radius: 150px;
-  padding: 20px;
+  padding: 24px 9px;
   margin-right:-26px;
+  font-weight: bolder;
   box-shadow: 4px 7px 11px white;
   justify-content: center;
     i {
     font-size: 32px;
-    color: #69B578;
+    color: #A4B8C4;
       }
 }
 
@@ -194,5 +243,28 @@ i {
   background-color: green;
 }
 
+.text-card {
+  font-size: 12px;
+  color: #8B9BA5;
+  margin-top: -45px;
+  font-weight: bolder;
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-top: 12px;
+}
+
+.travel-mode-journey-historical {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 39px;
+  margin: 28px 34px -12px;
+  color: #6B6770;
+
+}
+
+.fa-grip-lines-vertical:before {
+    margin-left: -12px;
+    margin-top: 50px;
+}
 
 
