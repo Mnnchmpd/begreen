@@ -6,7 +6,7 @@
 //   width: fit-content;
 // }
 .allpage {
-  background: #E5E5E5;
+  background: #f5f5f5;
   min-height: calc(100vh - 96px);
   padding: 16px;
 
@@ -21,10 +21,11 @@
   margin-top: 0;
   margin-bottom: 1rem;
   text-align-last: auto;
-  size: 30px;
-  color: forestgreen;
+  size: 24px;
+  color: rgba(0, 0, 0, 0.8);
   margin: 0;
   line-height:35px;
+  text-align: center;
 
 }
 
@@ -51,7 +52,7 @@
 .btn-outline-success-two {
   color: forestgreen;
   border-color: forestgreen;
-  margin-top: 62px;
+  margin-top: 6px;
   background-color: white;
   border-radius: 5px;
 }
@@ -94,7 +95,7 @@
   .journey-options-footprint {
     color: #000000;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     flex: 20%;
   }
 
@@ -124,6 +125,13 @@
   }
 }
 
+.label-card p {
+  width: inherit !important;
+  height: inherit !important;
+  display: block !important;
+  font-size: 12px !important;
+}
+
 .journey-options-card p.transport {
   display: flex;
   height: 50px;
@@ -133,6 +141,12 @@
   margin: 8px;
   flex: 10%;
   margin-right: 16px;
+  font-size: 24px;
+}
+
+.journey-options-card i {
+  color: white;
+  size: 20px;
 }
 
 .journey-info span {

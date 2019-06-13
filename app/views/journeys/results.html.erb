@@ -7,7 +7,7 @@
   <span>End</span><%= @ending_point.split(",").first  %>
 </div>
 <div class="all-propositions">
-  <span><strong>Our recommendation :</strong></span>
+  <span><strong>Our recommendations :</strong></span>
   <div class="way-to-go" role="group" aria-label="Basic example">
     <div class="journey-path">
       <div class="journey-options-card label-card">
@@ -38,7 +38,7 @@
             <% end %>
 
           <p class="journey-options-distance"><%= result["routes"][0]["legs"][0]["distance"]["text"] %></p>
-          <p class="journey-options-duration"><%= result["routes"][0]["legs"][0]["duration"]["text"] %></p>
+          <p class="journey-options-duration"><%= result["routes"][0]["legs"][0]["duration"]["text"].split.first(2).join %></p>
           <p class="journey-options-footprint">
             <%= "#{(result["routes"][0]["legs"][0]["distance"]["text"]).to_f * 206} g" if result["travel_mode"] == "driving" %>
             <%= "#{(result["routes"][0]["legs"][0]["distance"]["text"]).to_f * 3.8} g" if result["travel_mode"] == "transit" %>
