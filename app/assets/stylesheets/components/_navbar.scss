@@ -31,8 +31,10 @@
 }
 
 .navbar {
+  position: fixed;
   top: 0px;
   z-index: 100;
+  width: 100%;
 }
 
 .box-shadow {

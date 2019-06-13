@@ -1,0 +1,32 @@
+.dash-content .tab-content {
+  min-height: 100vh;
+
+}
+
+.dash-infos-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+  padding: 25px;
+  .dash-infos-card {
+    border: 1px solid #249D50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .dash-infos-card:last-child {
+    margin-left: 10px;
+  }
+}
+.card-infos-image {
+  object-fit: contain;
+  width: 50%;
+  position: relative;
+  top: -10%;
+}
+
+.card-infos-right {
+  flex-grow: 1;
+  text-align: center;
+}

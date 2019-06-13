@@ -1,89 +1,125 @@
 <!-- Ici tous les pictos de la vue infos du dashboard -->
-<div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-<!--
-    <div class="dashboard-circle">
-      <div class="dashboard-circle-white">
-        <i class="fas fa-road"></i>
-      </div>
-      <div class="dashboard-circle-infos text-center">
-        <p class="circle-info-data">60kms</p>
-        <p class="circle-info-datatype">Traveled</p>
-      </div>
-    </div>
- -->
-    <div class="first-row-infos-circle">
 
-      <div class="circle-card-picto-1">
-        <i class="fas fa-leaf"></i>
-        <div class="text-card"> Kg CO2 saved</div>
+<div class="dash-content">
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <!--
+        <div class="dashboard-circle">
+          <div class="dashboard-circle-white">
+            <i class="fas fa-road"></i>
+          </div>
+          <div class="dashboard-circle-infos text-center">
+            <p class="circle-info-data">60kms</p>
+            <p class="circle-info-datatype">Traveled</p>
+          </div>
+        </div>
+      -->
+      <div class="dash-infos-cards">
+        <div class="dash-infos-card">
+          <img  src="<%= image_path("undraw_environment_iaus.png")%>" class="card-infos-image">
+          <div class="card-infos-right">
+            <h3><%= @total_distances.to_i %></h3>
+            <p>Kg CO2 saved</p>
+          </div>
+        </div>
+        <div class="dash-infos-card">
+          <img  src="<%= image_path("undraw_superhero_kguv.png")%>" class="card-infos-image">
+          <div class="card-infos-right">
+            <h3>Ambassador</h3>
+            <p>Begreen</p>
+          </div>
+        </div>
       </div>
 
-      <div class="circle-card-picto-2">
-        <i class="fas fa-crown"></i>
+
+
+
+      <div class="first-row-infos-classement">
+        <div class="text-card-classement"> kilometers</div>
+        <div class="text-card-rank"> You've travelled 35 kilometers with Begreen</div>
       </div>
+      <div class="first-row-infos-classement">
+        <div class="text-card-classement"> Votre Classement</div>
+        <div class="text-card-rank"> Vous êtes le 355 ème Beegrenor</div>
+      </div>
+
+       <div class="first-row-infos-classement">
+        <div class="text-card-classement"> Challenge yourself</div>
+        <div class="progress" style="height: 15px;">
+        <div class="progress-bar" role="progressbar" style="width: 67%;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <div class= "pourcentage-challenge">
+        <h5>0 kms</h5>
+        <h6>30kms</h6>
+        <h7>50kms</h7>
+      </div>
+     <!--  <div class="text-card-challenge"> Il vous rester 30kms à parcourir avec BeGreen pour tenter de gagner un abonnement Vélib d'un an</div>
+      </div> -->
+
     </div>
+
+  
     <%= link_to "New Travel?", new_journey_path, class: "btn add btn-outline-success" %>
 
-    <!-- NOMBRE DE TRAJETS EN KM ET STATUS UTILISATEUR -->
-    <!-- <div class="first-row-infos-text"> -->
-      <!-- <div class="text-card-1"> <%= @total_distances.to_i%></div>
-      <div class="text-card-2"> Bgreen</div>
+
+
+      <!-- NOMBRE DE TRAJETS EN KM ET STATUS UTILISATEUR -->
+      <!--<div class="first-row-infos-text"> -->
+        <!-- <div class="text-card-1"> <%= @total_distances.to_i%></div>
+        <div class="text-card-2"> Bgreen</div>
+      </div>
+      <div class="second-row-infos-text">
+        <div class="text-card"> Kms traveled</div>
+        <div class="text-card">Status</div>
+      </div>
+      <div class="first-row-infos-circle">
+        <div class="circle-card-picto"><i class="fas fa-leaf"></i></div>
+        <div class="circle-card-picto"><i class="fas fa-print"></i></div>
+      </div>
+     EMISSION DE CARBONE EMIS ET NOMBRE DE TRAJETS -->
+      <!-- <div class="first-row-infos-text"> -->
+        <!-- <div class="text-card-1"> <%= @car_indices.round+ @transit_indices.round %></div> -->
+        <!-- <div class="text-card-2"> <%= @journeys.count %> </div> -->
+      <!-- </div> -->
+      <!-- <div class="second-row-infos-text"> -->
+        <!-- <div class="text-card"> Kg CO2 saved</div> -->
+        <!-- <div class="text-card">  Journeys</div> -->
+      <!-- </div> -->
+    <!-- Ici la vue de l'historique des trajets  -->
+   
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+      <%= link_to "Add a Journey", new_journey_path, class: "btn add btn-outline-success" %>
+      <div class="accordion" id="accordionJourney">
+        <% @user.journeys.each do |journey| %>
+          <%= render "shared/card", journey: journey %>
+        <% end %>
+      </div>
     </div>
-    <div class="second-row-infos-text">
-      <div class="text-card"> Kms traveled</div>
-      <div class="text-card">Status</div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+      <ul class="list-inline tabs-underlined">
+        <li>
+          <a href="#" class="tab-underlined active">Weekly</a>
+        </li>
+        <li>
+          <a href="#" class="tab-underlined">Monthly</a>
+        </li>
+        <li>
+          <a href="#" class="tab-underlined">Yearly</a>
+        </li>
+       </ul>
+      <canvas id="lineChart" width="150" height="130"></canvas>
     </div>
-    <div class="first-row-infos-circle">
-      <div class="circle-card-picto"><i class="fas fa-leaf"></i></div>
-      <div class="circle-card-picto"><i class="fas fa-print"></i></div>
-    </div>
-   EMISSION DE CARBONE EMIS ET NOMBRE DE TRAJETS -->
-    <!-- <div class="first-row-infos-text"> -->
-      <!-- <div class="text-card-1"> <%= @car_indices.round+ @transit_indices.round %></div> -->
-      <!-- <div class="text-card-2"> <%= @journeys.count %> </div> -->
-    <!-- </div> -->
-    <!-- <div class="second-row-infos-text"> -->
-      <!-- <div class="text-card"> Kg CO2 saved</div> -->
-      <!-- <div class="text-card">  Journeys</div> -->
-    <!-- </div> -->
-  <!-- Ici la vue de l'historique des trajets  -->
-  <%= render "shared/progress_bar" %>
   </div>
 
-
-
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-    <div class="accordion" id="accordionJourney">
-      <% @user.journeys.each do |journey| %>
-        <%= render "shared/card", journey: journey %>
-      <% end %>
-    </div>
-  </div>
+  <%= render 'shared/dashboard_nav_tabs' if params[:action] == "dashboard" %>
 
 
 
-  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-    <ul class="list-inline tabs-underlined">
-      <li>
-        <a href="#" class="tab-underlined active">Weekly</a>
-      </li>
-      <li>
-        <a href="#" class="tab-underlined">Monthly</a>
-      </li>
-      <li>
-        <a href="#" class="tab-underlined">Yearly</a>
-      </li>
-    </ul>
 
 
 
-    <canvas id="lineChart" width="150" height="130"></canvas>
-  </div>
 
-</div>
 
-<%= render 'shared/dashboard_nav_tabs' if params[:action] == "dashboard" %>
 
 
 
