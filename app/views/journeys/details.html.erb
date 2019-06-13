@@ -1,14 +1,26 @@
 <div
   id="map"
   style="width: 100%;
-  height: 600px;"
+  height: 400px;"
   data-markers="<%= @markers.to_json %>"
   data-steps="<%= @map_steps.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
 <div class="journey-detail-card" id="accordionExample"><a href="#" class="text-decoration-none">
-  <div class="detail-card">
-    <li><i class="fas fa-leaf"></i> Start my Green Journey</li>
+
+
+  <%= simple_form_for @journey do |f| %>
+    <%= f.input :starting_point, input_html: { value: @starting_point }, as: :hidden %>
+    <%= f.input :ending_point, input_html: { value: @ending_point }, as: :hidden  %>
+    <%= f.input :travel_mode, input_html: { value: @travel_mode }, as: :hidden  %>
+    <%= f.input :distances, input_html: { value: @distance }, as: :hidden  %>
+
+    <%= f.submit "Add", class: "btn btn-outline-success" %>
+
+  <% end %>
+<div class="detail-card">
+
+<li><i class="fas fa-leaf"></i> Start my Green Journey</li>
     <% @steps.each do |step| %>
       <div class="first-header" id="headingOne">
         <h4 class="mb-0">
@@ -30,12 +42,4 @@
   </div>
 </div>
 
-  <%= simple_form_for @journey do |f| %>
-    <%= f.input :starting_point, input_html: { value: @starting_point }, as: :hidden %>
-    <%= f.input :ending_point, input_html: { value: @ending_point }, as: :hidden  %>
-    <%= f.input :travel_mode, input_html: { value: @travel_mode }, as: :hidden  %>
-    <%= f.input :distances, input_html: { value: @distance }, as: :hidden  %>
-  <div class="btn btn-outline-success">
-    <%= f.submit "Done" %>
-  </div>
-  <% end %>
+

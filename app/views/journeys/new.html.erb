@@ -1,22 +1,25 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <h3> You forgot to add your journey? Don't worry, complete this form and add it to your profile!</h3>
-    <div class="col-md-8">
-      <div class="autocomplete-form">
-      <%= simple_form_for @journey do |f| %>
-        <%= f.input :starting_point, input_html: { value: @starting_point } %>
-        <%= f.input :ending_point, input_html: { value: @ending_point } %>
-        <%= f.input :travel_mode, collection: ["🚗 Car", "🚎 Public transportation", "🚲 Bicycle", "🚶‍♀️ Walk"], input_html: { class: 'select2' } %>
+<div class="background-home" style="background-image: url(<%= image_path 'leaves.jpg' %>)">
+  <div class="container">
+    <h1 class="text-center-article">
+     You forgot to add your journey? Don't worry, complete this form and add it to your profile!</h1>
+      <div class="col-md-8">
+        <div class="form-where-we-go autocomplete-form">
+        <%= simple_form_for @journey do |f| %>
+          <%= f.input :starting_point, input_html: { value: @starting_point }, placeholder: "Start" %>
+          <%= f.input :ending_point, input_html: { value: @ending_point }, placeholder: "End" %>
+          <%= f.input :travel_mode, collection: ["🚗 Car", "🚎 Public transportation", "🚲 Bicycle", "🚶‍♀️ Walk"], input_html: { class: 'select2' } %>
 
-            <%= f.input :date, as: :string, placeholder: 'debut', required: false, input_html: {class: "datepicker"} %>
-            <%#= f.input :date, as: :string, required: false, placeholder: 'fin', input_html: {class: "datepicker"} %>
+              <%= f.input :date, as: :string, placeholder: 'Date', required: false, input_html: {class: "datepicker"} %>
+              <%#= f.input :date, as: :string, required: false, placeholder: 'fin', input_html: {class: "datepicker"} %>
 
-        <%= f.button :submit, class: "btn btn-sm success" %>
-      <% end %>
-<%#= render 'pages/calendar' %>
+          <%= f.button :submit, class: "btn btn-success"%>
+        <% end %>
+  <%#= render 'pages/calendar' %>
+      </div>
+     </div>
+
     </div>
-   </div>
-
   </div>
 </div>
+
 
