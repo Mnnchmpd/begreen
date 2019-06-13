@@ -1,20 +1,48 @@
+<div class="allpage">
+<div class="form-control mr-sm-2 journey-info" >
+  <span>Start</span><%= @starting_point.split(",").first  %>
+</div>
+
+<div class="form-control mr-sm-2 journey-info" style="margin-bottom: 20px">
+  <span>End</span><%= @ending_point.split(",").first  %>
+</div>
 <div class="all-propositions">
+  <span><strong>Our recommendation :</strong></span>
   <div class="way-to-go" role="group" aria-label="Basic example">
-    <ul class="journey-path">
+    <div class="journey-path">
+      <div class="journey-options-card label-card">
+        <p class="transport">
+          TYPE
+        </p>
+         <p class="transport">
+          DISTANCE
+        </p>
+         <p class="transport">
+          TIME
+        </p>
+         <p class="transport">
+          FOOTPRINT
+        </p>
+      </div>
       <% @results.each do |result| %>
         <div class="journey-options-card">
-          <p class="journey-options-mode">
-            <%= "🚗" if result["travel_mode"] == "driving" %>
-            <%= "🚶" if result["travel_mode"] == "walking" %>
-            <%= "🚲" if result["travel_mode"] == "bicycling" %>
-            <%= "🚃" if result["travel_mode"] == "transit" %>
-          </p>
+
+            <% if result["travel_mode"] == "driving"%>
+              <p class="journey-options-mode-red transport"><i class="fas fa-car"></i></p>
+            <% elsif result["travel_mode"] == "walking" %>
+              <p class="journey-options-mode-green transport"><i class="fas fa-walking"></i></p>
+            <% elsif result["travel_mode"] == "bicycling" %>
+              <p class="journey-options-mode-green transport"><i class="fas fa-bicycle"></i></p>
+            <% elsif result["travel_mode"] == "transit" %>
+              <p class="journey-options-mode-orange transport"><i class="fas fa-subway"></i></p>
+            <% end %>
+
           <p class="journey-options-distance"><%= result["routes"][0]["legs"][0]["distance"]["text"] %></p>
           <p class="journey-options-duration"><%= result["routes"][0]["legs"][0]["duration"]["text"] %></p>
           <p class="journey-options-footprint">
-            <%= "#{(result["routes"][0]["legs"][0]["distance"]["text"]).to_f * 206} g CO2 émis" if result["travel_mode"] == "driving" %>
-            <%= "#{(result["routes"][0]["legs"][0]["distance"]["text"]).to_f * 3.8} g CO2 émis" if result["travel_mode"] == "transit" %>
-            <%= "0g CO2 émis" if result["travel_mode"] == "bicycling" || result["travel_mode"] == "walking"  %>
+            <%= "#{(result["routes"][0]["legs"][0]["distance"]["text"]).to_f * 206} g" if result["travel_mode"] == "driving" %>
+            <%= "#{(result["routes"][0]["legs"][0]["distance"]["text"]).to_f * 3.8} g" if result["travel_mode"] == "transit" %>
+            <%= "0g" if result["travel_mode"] == "bicycling" || result["travel_mode"] == "walking"  %>
           </p>
           <%= form_tag details_path(result["travel_mode"]) do %>
             <%= hidden_field_tag 'starting_point', params[:journey][:starting_point] %>
@@ -24,17 +52,10 @@
           <% end %>
         </div>
       <% end %>
-    </ul>
+    </div>
   </div>
 </div>
 
-<div class="form-control mr-sm-2" >
-  <%= @starting_point  %>
-</div>
-
-<div class="form-control mr-sm-2" style="margin-bottom: 20px">
-  <%= @ending_point  %>
-</div>
 <%= link_to "Back to my search", root_path, class: "btn btn-outline-success-two" %>
 
-
+</div>
