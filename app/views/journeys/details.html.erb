@@ -19,25 +19,27 @@
 
   <% end %>
 <div class="detail-card">
+  <div class="fas fa-leaf" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> </div>
 
-<li><i class="fas fa-leaf"></i> Start my Green Journey</li>
+<li> Start my Green Journey</li>
+<div class="collapse" id="collapseExample">
     <% @steps.each do |step| %>
-      <div class="first-header" id="headingOne">
+<!--       <div class="first-header" id="headingOne">
         <h4 class="mb-0">
-          <li><i class="fas fa-leaf"></i> <%= step["travel_mode"] %>
-            <%= step["duration"]["text"] %> </li>
+          <li><i class="fas fa-leaf"></i> <%= step["distance"]["text"] %>
+            <%= step["html_instructions"].html_safe %>
         </h4>
-      </div>
-  </div>
+      </div> -->
+<!--   </div>
   <div class="detail-card">
         <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
-            <div class="card-body">
+            <div class="card-body"> -->
               <h5>
-              <%= step["html_instructions"].html_safe %>
-              <%= step["distance"]["text"] %>
+<%= step["distance"]["text"] %>
+            <%= step["html_instructions"].html_safe %>
             </h5>
-            </div>
-        </div>
+       <!--      </div>
+        </div> -->
     <% end %>
   </div>
 </div>
