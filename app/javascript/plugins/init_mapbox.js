@@ -68,7 +68,8 @@ const itineraire = (map, steps) => {
         "line-cap": "round"
       },
       "paint": {
-        "line-color": "#3b9ddd",
+        // pour changer la couleur de la route
+        "line-color": "#009661",
         "line-width": 8,
         "line-opacity": 0.8
       }
