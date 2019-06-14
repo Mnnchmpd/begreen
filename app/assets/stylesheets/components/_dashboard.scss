@@ -12,15 +12,15 @@
 
 .nav-tabs {
   height: 50px;
-  background: #4CAF50;
+  background:  #009661;
   justify-content: space-around;
   align-items: center;
 }
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
     color: white;
-    background-color: #4CAF50;
-    border-color: #4CAF50 #4CAF50 #4CAF50;
+    background-color: #009661;
+    border-color: #009661;
     font-weight: bold;
     text-align: center;
 }
@@ -70,7 +70,7 @@ nav i {
     margin-left: 24px;
     margin-top: 12px;
     font-size: 16px;
-    color: #369e36;
+    color: #483d3d;
 }
 
 
@@ -186,7 +186,7 @@ nav i {
 .text-card-classement {
   margin-left: 27px;
   margin-top: 10px;
-  color: grey;
+  color: #009661;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -221,7 +221,7 @@ nav i {
   margin-left: 27px;
   margin-bottom: 13px;
   font-size: 15px;
-  color: #369e36;
+  color: #483d3d;
 
 }
 
@@ -349,5 +349,6 @@ element.style {
   margin-left: 27px;
   margin-right: 27px;
 }
+
 
 
