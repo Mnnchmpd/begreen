@@ -43,25 +43,36 @@ nav i {
 
 // vabar challenge pourcentage
    h5 {
-  font-family: tahoma, sans-serif;
+  font-family: Raleway, sans-serif;
   font-size: 12px;
   color: #9e9e9e;
   align-right: 11%;
-  margin-left: 0%;
+  margin-left: -7%;
+  color: #7b7171;;
   }
 
   h6 {
-  color: #9e9e9e;
+  color: #7b7171;
   }
 
    h7 {
-    font-family: tahoma, sans-serif;
+    font-family: Raleway, sans-serif;
     font-size: 12px;
     color: #9e9e9e;
     align-right: 11%;
     margin-right: -8%;
+    color: #7b7171
 
 }
+  h8 {
+    display: block;
+    align-content: center;
+    margin-left: 24px;
+    margin-top: 12px;
+    font-size: 16px;
+    color: #369e36;
+}
+
 
 .fa-leaf:before {
     font-size: 45px;
@@ -144,6 +155,10 @@ nav i {
   color: black;
 }
 
+.first-row-infos-classement {
+  margin-bottom: 15px;
+}
+
 .text-card-ambassador {
   font-size: 41px;
   margin-left: 14px;
@@ -173,7 +188,7 @@ nav i {
   margin-top: 10px;
   color: grey;
   font-weight: bold;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 // progress bar challenge
 .progress-challenge {
@@ -184,7 +199,7 @@ nav i {
   background-color: #e9ecef;
   border-radius: 2px;
   width: 320px;
-  margin-left: 35px;
+  margin-left: 27px;
 }
 // progress bar challenge
 .progress-bar-challenge {
@@ -194,17 +209,18 @@ nav i {
   text-align: center;
   white-space: nowrap;
   margin-right: 49px;
-  background-color: #4ab5ab;
+  background-color: #fbc116;
   transition: width 10.6s ease;
   margin-right: 8px;
+
 
 }
 
 
 .text-card-rank {
-  margin-left: 23px;
-  margin-top: 13px;
-  font-size: 20px;
+  margin-left: 27px;
+  margin-bottom: 13px;
+  font-size: 15px;
   color: #369e36;
 
 }
@@ -272,3 +288,65 @@ nav i {
 .bg-red {
   background: #FF6161;
 }
+
+
+element.style {
+}
+.btn-success {
+    display: flex;
+    justify-content: center;
+}
+.btn-add-trip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 37px;
+    width: 37px;
+    border: none;
+    color: #f9f6f6e0;
+    left: 5%;
+    margin-left: 18px;
+    position: absolute !important;
+    left: 78%;
+    font-size: 40px;
+    align-items: center;
+    font-weight: 400;
+    background-color: #e2dcdc;
+
+    &:hover {
+      color: #f9f6f6e0;
+      text-decoration: none;
+      background-color: #4cae51;
+
+    }
+
+  }
+
+  .green-background {
+    background-color: #4cae51;
+  }
+
+ .learnmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .challenge-image {
+    width: 21%;
+    position: relative;
+    margin-right: -87px;
+    top: -10%;
+    }
+ }
+
+ h9 {
+  margin-top: 38px;
+  font-size: 11px;
+ }
+
+.margin-27 {
+  margin-left: 27px;
+  margin-right: 27px;
+}
+

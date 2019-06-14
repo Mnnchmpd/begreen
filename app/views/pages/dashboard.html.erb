@@ -14,7 +14,6 @@
           </div>
         </div>
       -->
-       <%= link_to "New Trip", new_journey_path, class: "btn-new btn-outline-success" %>
       <div class="dash-infos-cards">
         <div class="dash-infos-card">
           <img  src="<%= image_path("undraw_environment_iaus.png")%>" class="card-infos-image">
@@ -34,24 +33,30 @@
 
 
 
+      <%= link_to "+", new_journey_path, class: "btn-add-trip", id: "add-trip" %>
 
       <div class="first-row-infos-classement">
-        <div class="text-card-classement"> kilometers</div>
-        <div class="text-card-rank"> You've travelled 185 kilometers with Begreen</div>
+        <div class="text-card-classement">Kilometers</div>
+        <div class="text-card-rank"> You've travelled <strong><%= @journeys.count %> kilometers </strong>with Begreen</div>
       </div>
       <div class="first-row-infos-classement">
-        <div class="text-card-classement"> Votre Classement</div>
-        <div class="text-card-rank"> Vous êtes le 355 ème Beegrenor</div>
+        <div class="text-card-classement"> Your challenge</div>
+        <div class="text-card-rank"> You are the <strong>355 th</strong> Beegrenor</div>
       </div>
       <div class="first-row-infos-classement">
         <div class="text-card-classement"> Challenge yourself</div>
         <div class="progress-challenge" style="height: 15px;">
-          <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
+          <div class="progress-bar-challenge" role="progressbar" style="width: 50%;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
          </div>
         <div class= "pourcentage-challenge">
             <h5>0 kms</h5>
             <h6>150kms</h6>
             <h7>300kms</h7>
+        </div>
+        <h8 class="margin-27"> Only <strong>150 kilometers</strong> until you can win one full year subscription to Vélib </h8>
+        <div class= "learnmore">
+          <h9>For more information visit</h9>
+          <img  src="<%= image_path("velib-logo.png")%>" class="challenge-image">
         </div>
       </div>
      <!--  <div class="text-card-challenge"> Il vous rester 30kms à parcourir avec BeGreen pour tenter de gagner un abonnement Vélib d'un an</div>
@@ -66,7 +71,7 @@
 
       <!-- NOMBRE DE TRAJETS EN KM ET STATUS UTILISATEUR -->
       <!--<div class="first-row-infos-text"> -->
-        <!-- <div class="text-card-1"> <%= @total_distances.to_i%></div>
+        <!-- <div class="text-card-1"> <%#= @total_distances.to_i%></div>
         <div class="text-card-2"> Bgreen</div>
       </div>
       <div class="second-row-infos-text">
@@ -79,7 +84,7 @@
       </div>
      EMISSION DE CARBONE EMIS ET NOMBRE DE TRAJETS -->
       <!-- <div class="first-row-infos-text"> -->
-        <!-- <div class="text-card-1"> <%= @car_indices.round+ @transit_indices.round %></div> -->
+        <!-- <div class="text-card-1"> <%#= @car_indices.round+ @transit_indices.round %></div> -->
         <!-- <div class="text-card-2"> <%= @journeys.count %> </div> -->
       <!-- </div> -->
       <!-- <div class="second-row-infos-text"> -->
@@ -118,9 +123,12 @@
 </div>
 
 
-
-
-
+<!--
+<script>
+  const button = document.getElementById("add-trip");
+  button.addEventListener('mouseover', (e) => console.log(e))
+</script>
+ -->
 
 
 

@@ -35,10 +35,15 @@
   border: solid #b5dda4 1px;
   padding: 10px !important;
   margin-bottom: 16px;
-  color: #0E0000;
   font-family: tahoma, sans-serif;
-  background: transparent;
   margin-bottom: 32px;
+  background-color: #69c574;
+  color: white;
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .green-journey {
@@ -54,4 +59,9 @@
       transform: rotate(180deg);
     }
   }
+}
+
+.steps-details {
+  width: 100%;
+  margin: 10px 0;
 }
